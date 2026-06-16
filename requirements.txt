@@ -1,0 +1,15 @@
+# Install torch / torchvision SEPARATELY via scripts/setup_*.{ps1,sh}
+# (the correct wheel depends on your CUDA version). Everything else:
+
+timm>=1.0.0
+# Face detection / landmarks for D2/D3/D4 preprocessing
+mediapipe>=0.10.14
+opencv-python>=4.9
+# Data, metrics, plots
+numpy>=1.26
+pandas>=2.0
+scikit-learn>=1.4
+matplotlib>=3.8
+Pillow>=10.0
+pyyaml>=6.0
+tqdm>=4.66
