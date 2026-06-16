@@ -1,0 +1,52 @@
+# Reference spec for the 16-run matrix (4 models x 4 preprocessing versions).
+# src/train.py CLI defaults mirror these values; src/run_matrix.py uses the
+# model list + per-model batch sizes below.
+
+seed: 42
+img_size: 224
+
+split:
+  train: 0.70
+  val: 0.15
+  test: 0.15
+
+training:
+  epochs: 30
+  freeze_epochs: 3      # train classifier head only for the first N epochs
+  patience: 6           # early stopping on val macro-F1
+  lr_head: 0.001
+  lr_full: 0.0001
+  weight_decay: 0.0001
+  optimizer: adamw
+
+models:                 # key -> timm id
+  resnet50: resnet50
+  efficientnetv2s: tf_efficientnetv2_s
+  mobilenetv3small: mobilenetv3_small_100   # APP DEPLOYMENT TARGET
+  swint: swin_tiny_patch4_window7_224
+
+batch_size:             # per-model (lower for the memory-hungry nets)
+  resnet50: 32
+  efficientnetv2s: 16
+  mobilenetv3small: 32
+  swint: 16
+
+preprocessing:
+  D1: resize only (224)
+  D2: face-crop (MediaPipe) -> resize
+  D3: face-crop -> augmentation -> resize
+  D4: face-crop -> alignment -> augmentation -> resize   # heaviest / optional
+
+augmentation:           # train split only, D3 & D4
+  - horizontal_flip
+  - random_rotation_15deg
+  - brightness_contrast_jitter
+
+metrics:
+  - accuracy
+  - macro_precision
+  - macro_recall
+  - macro_f1
+  - confusion_matrix
+
+classes: [heart, oblong, oval, round, square]

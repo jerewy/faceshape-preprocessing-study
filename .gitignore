@@ -1,0 +1,24 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Data (never commit images — datasets are obtained separately)
+data/raw/
+data/preprocessed/
+data/cache/
+
+# Training artifacts
+runs/
+splits/
+*.pt
+*.pth
+*.ckpt
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
