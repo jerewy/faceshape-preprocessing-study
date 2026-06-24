@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import urllib.request
 from pathlib import Path
 
 import cv2
@@ -27,21 +28,67 @@ RIGHT_EYE_OUTER = 33
 LEFT_EYE_OUTER = 263
 NOSE_TIP = 1
 
+FACE_LANDMARKER_URL = (
+    "https://storage.googleapis.com/mediapipe-models/face_landmarker/"
+    "face_landmarker/float16/latest/face_landmarker.task"
+)
+FACE_LANDMARKER_PATH = Path("data/cache/mediapipe/face_landmarker.task")
+
+
+class _TasksFaceLandmarkerAdapter:
+    def __init__(self):
+        import mediapipe as mp
+
+        FACE_LANDMARKER_PATH.parent.mkdir(parents=True, exist_ok=True)
+        if not FACE_LANDMARKER_PATH.exists():
+            urllib.request.urlretrieve(FACE_LANDMARKER_URL, FACE_LANDMARKER_PATH)
+
+        options = mp.tasks.vision.FaceLandmarkerOptions(
+            base_options=mp.tasks.BaseOptions(model_asset_path=str(FACE_LANDMARKER_PATH)),
+            running_mode=mp.tasks.vision.RunningMode.IMAGE,
+            num_faces=1,
+            min_face_detection_confidence=0.5,
+            min_face_presence_confidence=0.5,
+            min_tracking_confidence=0.5,
+        )
+        self._mp = mp
+        self._landmarker = mp.tasks.vision.FaceLandmarker.create_from_options(options)
+
+    def process(self, img_rgb):
+        mp_image = self._mp.Image(image_format=self._mp.ImageFormat.SRGB, data=img_rgb)
+        return self._landmarker.detect(mp_image)
+
+    def close(self):
+        self._landmarker.close()
+
 
 def _make_facemesh():
-    import mediapipe as mp
-    return mp.solutions.face_mesh.FaceMesh(
-        static_image_mode=True, max_num_faces=1,
-        refine_landmarks=False, min_detection_confidence=0.5,
-    )
+    try:
+        from mediapipe.python.solutions.face_mesh import FaceMesh
+        return FaceMesh(
+            static_image_mode=True, max_num_faces=1,
+            refine_landmarks=False, min_detection_confidence=0.5,
+        )
+    except ModuleNotFoundError:
+        try:
+            from mediapipe.solutions.face_mesh import FaceMesh
+            return FaceMesh(
+                static_image_mode=True, max_num_faces=1,
+                refine_landmarks=False, min_detection_confidence=0.5,
+            )
+        except ModuleNotFoundError:
+            return _TasksFaceLandmarkerAdapter()
 
 
 def _landmarks(face_mesh, img_rgb):
     res = face_mesh.process(img_rgb)
-    if not res.multi_face_landmarks:
+    face_landmarks = getattr(res, "multi_face_landmarks", None)
+    if face_landmarks is None:
+        face_landmarks = getattr(res, "face_landmarks", None)
+    if not face_landmarks:
         return None
     h, w = img_rgb.shape[:2]
-    lm = res.multi_face_landmarks[0].landmark
+    lm = getattr(face_landmarks[0], "landmark", face_landmarks[0])
     return np.array([[p.x * w, p.y * h] for p in lm], dtype=np.float32)
 
 

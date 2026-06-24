@@ -15,10 +15,10 @@ IMAGENET_STD = [0.229, 0.224, 0.225]
 
 # Which precomputed source each version reads from. "raw" -> original images.
 SOURCE_BY_VERSION = {
-    "D1": "raw",    # resize only
-    "D2": "crop",   # face crop + resize
-    "D3": "crop",   # face crop + augmentation
-    "D4": "align",  # face crop + alignment + augmentation
+    "D1": "resize",  # resize only — reads a precomputed downscale of raw (fast loading)
+    "D2": "crop",    # face crop + resize
+    "D3": "crop",    # face crop + augmentation
+    "D4": "align",   # face crop + alignment + augmentation
 }
 AUGMENT_VERSIONS = {"D3", "D4"}
 

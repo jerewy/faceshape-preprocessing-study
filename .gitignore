@@ -1,5 +1,5 @@
 # Python
-.venv/
+.venv*/
 venv/
 __pycache__/
 *.pyc
@@ -7,6 +7,7 @@ __pycache__/
 
 # Data (never commit images — datasets are obtained separately)
 data/raw/
+data/raw_download/
 data/preprocessed/
 data/cache/
 
