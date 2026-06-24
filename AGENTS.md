@@ -43,6 +43,17 @@ not need any external chat context. Read `README.md` for the full design.
   further or add gradient accumulation.
 - 16 runs on a single T4 ≈ a few hours total.
 
+## Known issues / fixes applied
+
+- **Truncated images:** some Kaggle images are truncated. Fixed in `src/data.py`
+  with `PIL.ImageFile.LOAD_TRUNCATED_IMAGES = True`.
+- **`desktop.ini` in dataset:** `testing_set/Round` contained a Windows system
+  file causing image count to appear as 1001. Remove any non-image files from
+  `data/raw/` before running splits.
+- **mediapipe 0.10+:** the `mp.solutions` API was removed. `preprocess_faces.py`
+  must use the Tasks API (`mediapipe.tasks.vision.FaceLandmarker`) or an
+  alternative face detector. See `src/preprocess_faces.py` for current approach.
+
 ## Do / don't
 
 - **Do** keep input size at 224×224 for every model so preprocessing is the only

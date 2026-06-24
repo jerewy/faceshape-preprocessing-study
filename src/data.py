@@ -11,8 +11,10 @@ import csv
 import random
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, ImageFile
 from torch.utils.data import Dataset
+
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 CLASSES = ["heart", "oblong", "oval", "round", "square"]
 CLASS_TO_IDX = {c: i for i, c in enumerate(CLASSES)}
