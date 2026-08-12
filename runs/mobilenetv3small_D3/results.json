@@ -1,0 +1,10 @@
+{
+  "accuracy": 0.8097165991902834,
+  "macro_precision": 0.8146865646544841,
+  "macro_recall": 0.8103543554587039,
+  "macro_f1": 0.8074546409864867,
+  "model": "mobilenetv3small",
+  "preprocess": "D3",
+  "test_accuracy": 0.8097165991902834,
+  "best_val_macro_f1": 0.7987229518341481
+}
