@@ -1,0 +1,10 @@
+{
+  "accuracy": 0.7786774628879892,
+  "macro_precision": 0.7844106299281178,
+  "macro_recall": 0.7787201608154077,
+  "macro_f1": 0.780320851677465,
+  "model": "efficientnetv2s",
+  "preprocess": "D1",
+  "test_accuracy": 0.7786774628879892,
+  "best_val_macro_f1": 0.7885148111843028
+}

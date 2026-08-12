@@ -1,25 +1,22 @@
-# Python
+# Virtualenvs (including the .venv.broken-* / .venv.bad* leftovers)
+.venv/
 .venv*/
-venv/
-__pycache__/
-*.pyc
-*.egg-info/
 
-# Data (never commit images — datasets are obtained separately)
-data/raw/
-data/raw_download/
-data/preprocessed/
-data/cache/
+# Dataset: public on Kaggle (CC0), 2.3 GB of images + precomputed crop/align caches
+# https://www.kaggle.com/datasets/niten19/face-shape-dataset
+data/
 
-# Training artifacts
-runs/
-splits/
+# Model checkpoints — ~110 MB each, 3.9 GB across the 56 runs.
+# Per-run results.json / epochs.csv / test_predictions.npz / confusion_matrix.png
+# ARE tracked, so every number in the paper stays reproducible from this repo.
+best.pt
 *.pt
 *.pth
-*.ckpt
 
-# OS / editor
-.DS_Store
-Thumbs.db
-.idea/
-.vscode/
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local scratch
+_smoke/

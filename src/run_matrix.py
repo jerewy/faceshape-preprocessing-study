@@ -18,8 +18,10 @@ MODELS = ["resnet50", "efficientnetv2s", "mobilenetv3small", "swint"]
 VERSIONS = ["D1", "D2", "D3", "D4"]
 # Lower batch size for the memory-hungry nets so they fit on smaller GPUs.
 BATCH = {"resnet50": 32, "efficientnetv2s": 16, "mobilenetv3small": 32, "swint": 16}
+# ``seed`` onwards are absent from the original 16 runs and come out blank there.
 SUMMARY_KEYS = ["model", "preprocess", "test_accuracy", "macro_f1",
-                "macro_precision", "macro_recall", "best_val_macro_f1"]
+                "macro_precision", "macro_recall", "best_val_macro_f1",
+                "seed", "epochs_run", "train_seconds"]
 
 
 def main():

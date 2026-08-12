@@ -1,0 +1,26 @@
+{
+  "accuracy": 0.8205128205128205,
+  "macro_precision": 0.8279411580218131,
+  "macro_recall": 0.8207159167993957,
+  "macro_f1": 0.8221341404439997,
+  "model": "mobilenetv3small",
+  "preprocess": "D4",
+  "test_accuracy": 0.8205128205128205,
+  "best_val_macro_f1": 0.8046525125803429,
+  "seed": 2025,
+  "split_seed": 42,
+  "epochs_run": 30,
+  "train_seconds": 1507.6,
+  "total_seconds": 1530.2,
+  "environment": {
+    "torch": "2.11.0+cu128",
+    "python": "3.13.3",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device_type": "cuda",
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "gpu_memory_total_gb": 8.0,
+    "cuda": "12.8",
+    "cudnn": 91900
+  },
+  "peak_gpu_memory_gb": 0.53
+}

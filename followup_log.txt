@@ -1,0 +1,1227 @@
+
+########################################################################
+# follow-up matrix: 40 runs, estimated 18:40:00 (~28 min/run)
+# expected finish  : 2026-08-12 17:36
+# log file         : C:\dev\prethesis\paper2\training\followup_log.txt
+# safe to interrupt: finished runs are skipped on restart
+########################################################################
+
+========================================================================
+Tier 1  alignment ablation  ->  results_align_ablation/   (seed 42, 8 runs)
+started 2026-08-11 22:56:46
+========================================================================
+[device] cuda
+[resnet50_D3n] e0 head val_acc=0.319 val_f1=0.294
+[resnet50_D3n] e1 head val_acc=0.378 val_f1=0.357
+[resnet50_D3n] e2 head val_acc=0.394 val_f1=0.385
+[resnet50_D3n] e3 full val_acc=0.470 val_f1=0.457
+[resnet50_D3n] e4 full val_acc=0.539 val_f1=0.530
+[resnet50_D3n] e5 full val_acc=0.606 val_f1=0.602
+[resnet50_D3n] e6 full val_acc=0.661 val_f1=0.654
+[resnet50_D3n] e7 full val_acc=0.687 val_f1=0.684
+[resnet50_D3n] e8 full val_acc=0.708 val_f1=0.705
+[resnet50_D3n] e9 full val_acc=0.742 val_f1=0.741
+[resnet50_D3n] e10 full val_acc=0.766 val_f1=0.764
+[resnet50_D3n] e11 full val_acc=0.778 val_f1=0.777
+[resnet50_D3n] e12 full val_acc=0.781 val_f1=0.780
+[resnet50_D3n] e13 full val_acc=0.792 val_f1=0.791
+[resnet50_D3n] e14 full val_acc=0.781 val_f1=0.781
+[resnet50_D3n] e15 full val_acc=0.790 val_f1=0.790
+[resnet50_D3n] e16 full val_acc=0.798 val_f1=0.798
+[resnet50_D3n] e17 full val_acc=0.810 val_f1=0.810
+[resnet50_D3n] e18 full val_acc=0.796 val_f1=0.797
+[resnet50_D3n] e19 full val_acc=0.798 val_f1=0.798
+[resnet50_D3n] e20 full val_acc=0.815 val_f1=0.814
+[resnet50_D3n] e21 full val_acc=0.797 val_f1=0.797
+[resnet50_D3n] e22 full val_acc=0.810 val_f1=0.812
+[resnet50_D3n] e23 full val_acc=0.805 val_f1=0.806
+[resnet50_D3n] e24 full val_acc=0.804 val_f1=0.805
+[resnet50_D3n] e25 full val_acc=0.816 val_f1=0.816
+[resnet50_D3n] e26 full val_acc=0.824 val_f1=0.824
+[resnet50_D3n] e27 full val_acc=0.812 val_f1=0.811
+[resnet50_D3n] e28 full val_acc=0.824 val_f1=0.824
+[resnet50_D3n] e29 full val_acc=0.816 val_f1=0.817
+[resnet50_D3n] DONE test_acc=0.822 test_macro_f1=0.821 (42.0 min, 30 epochs)
+[device] cuda
+[resnet50_D4n] e0 head val_acc=0.345 val_f1=0.312
+[resnet50_D4n] e1 head val_acc=0.362 val_f1=0.339
+[resnet50_D4n] e2 head val_acc=0.384 val_f1=0.370
+[resnet50_D4n] e3 full val_acc=0.474 val_f1=0.467
+[resnet50_D4n] e4 full val_acc=0.544 val_f1=0.537
+[resnet50_D4n] e5 full val_acc=0.609 val_f1=0.606
+[resnet50_D4n] e6 full val_acc=0.669 val_f1=0.664
+[resnet50_D4n] e7 full val_acc=0.707 val_f1=0.705
+[resnet50_D4n] e8 full val_acc=0.712 val_f1=0.709
+[resnet50_D4n] e9 full val_acc=0.761 val_f1=0.760
+[resnet50_D4n] e10 full val_acc=0.781 val_f1=0.780
+[resnet50_D4n] e11 full val_acc=0.781 val_f1=0.781
+[resnet50_D4n] e12 full val_acc=0.790 val_f1=0.791
+[resnet50_D4n] e13 full val_acc=0.780 val_f1=0.779
+[resnet50_D4n] e14 full val_acc=0.784 val_f1=0.784
+[resnet50_D4n] e15 full val_acc=0.794 val_f1=0.793
+[resnet50_D4n] e16 full val_acc=0.806 val_f1=0.806
+[resnet50_D4n] e17 full val_acc=0.789 val_f1=0.789
+[resnet50_D4n] e18 full val_acc=0.802 val_f1=0.803
+[resnet50_D4n] e19 full val_acc=0.792 val_f1=0.792
+[resnet50_D4n] e20 full val_acc=0.804 val_f1=0.805
+[resnet50_D4n] e21 full val_acc=0.825 val_f1=0.825
+[resnet50_D4n] e22 full val_acc=0.819 val_f1=0.819
+[resnet50_D4n] e23 full val_acc=0.815 val_f1=0.815
+[resnet50_D4n] e24 full val_acc=0.824 val_f1=0.825
+[resnet50_D4n] e25 full val_acc=0.816 val_f1=0.816
+[resnet50_D4n] e26 full val_acc=0.819 val_f1=0.818
+[resnet50_D4n] e27 full val_acc=0.809 val_f1=0.810
+[resnet50_D4n] e28 full val_acc=0.808 val_f1=0.808
+[resnet50_D4n] e29 full val_acc=0.815 val_f1=0.815
+[resnet50_D4n] DONE test_acc=0.842 test_macro_f1=0.843 (39.1 min, 30 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D3n] e0 head val_acc=0.289 val_f1=0.282
+[efficientnetv2s_D3n] e1 head val_acc=0.316 val_f1=0.314
+[efficientnetv2s_D3n] e2 head val_acc=0.316 val_f1=0.318
+[efficientnetv2s_D3n] e3 full val_acc=0.577 val_f1=0.579
+[efficientnetv2s_D3n] e4 full val_acc=0.712 val_f1=0.715
+[efficientnetv2s_D3n] e5 full val_acc=0.749 val_f1=0.747
+[efficientnetv2s_D3n] e6 full val_acc=0.792 val_f1=0.793
+[efficientnetv2s_D3n] e7 full val_acc=0.805 val_f1=0.806
+[efficientnetv2s_D3n] e8 full val_acc=0.810 val_f1=0.810
+[efficientnetv2s_D3n] e9 full val_acc=0.800 val_f1=0.799
+[efficientnetv2s_D3n] e10 full val_acc=0.835 val_f1=0.835
+[efficientnetv2s_D3n] e11 full val_acc=0.841 val_f1=0.845
+[efficientnetv2s_D3n] e12 full val_acc=0.836 val_f1=0.837
+[efficientnetv2s_D3n] e13 full val_acc=0.841 val_f1=0.841
+[efficientnetv2s_D3n] e14 full val_acc=0.798 val_f1=0.800
+[efficientnetv2s_D3n] e15 full val_acc=0.847 val_f1=0.846
+[efficientnetv2s_D3n] e16 full val_acc=0.835 val_f1=0.835
+[efficientnetv2s_D3n] e17 full val_acc=0.849 val_f1=0.849
+[efficientnetv2s_D3n] e18 full val_acc=0.813 val_f1=0.812
+[efficientnetv2s_D3n] e19 full val_acc=0.848 val_f1=0.849
+[efficientnetv2s_D3n] e20 full val_acc=0.844 val_f1=0.844
+[efficientnetv2s_D3n] e21 full val_acc=0.853 val_f1=0.855
+[efficientnetv2s_D3n] e22 full val_acc=0.878 val_f1=0.878
+[efficientnetv2s_D3n] e23 full val_acc=0.862 val_f1=0.862
+[efficientnetv2s_D3n] e24 full val_acc=0.866 val_f1=0.865
+[efficientnetv2s_D3n] e25 full val_acc=0.845 val_f1=0.845
+[efficientnetv2s_D3n] e26 full val_acc=0.847 val_f1=0.847
+[efficientnetv2s_D3n] e27 full val_acc=0.847 val_f1=0.847
+[efficientnetv2s_D3n] e28 full val_acc=0.875 val_f1=0.875
+[efficientnetv2s_D3n] early stop at epoch 28
+[efficientnetv2s_D3n] DONE test_acc=0.880 test_macro_f1=0.880 (40.8 min, 29 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D4n] e0 head val_acc=0.276 val_f1=0.269
+[efficientnetv2s_D4n] e1 head val_acc=0.298 val_f1=0.297
+[efficientnetv2s_D4n] e2 head val_acc=0.308 val_f1=0.309
+[efficientnetv2s_D4n] e3 full val_acc=0.609 val_f1=0.609
+[efficientnetv2s_D4n] e4 full val_acc=0.749 val_f1=0.748
+[efficientnetv2s_D4n] e5 full val_acc=0.785 val_f1=0.783
+[efficientnetv2s_D4n] e6 full val_acc=0.797 val_f1=0.793
+[efficientnetv2s_D4n] e7 full val_acc=0.819 val_f1=0.818
+[efficientnetv2s_D4n] e8 full val_acc=0.816 val_f1=0.815
+[efficientnetv2s_D4n] e9 full val_acc=0.819 val_f1=0.819
+[efficientnetv2s_D4n] e10 full val_acc=0.825 val_f1=0.825
+[efficientnetv2s_D4n] e11 full val_acc=0.812 val_f1=0.815
+[efficientnetv2s_D4n] e12 full val_acc=0.825 val_f1=0.825
+[efficientnetv2s_D4n] e13 full val_acc=0.815 val_f1=0.813
+[efficientnetv2s_D4n] e14 full val_acc=0.851 val_f1=0.850
+[efficientnetv2s_D4n] e15 full val_acc=0.832 val_f1=0.832
+[efficientnetv2s_D4n] e16 full val_acc=0.839 val_f1=0.839
+[efficientnetv2s_D4n] e17 full val_acc=0.855 val_f1=0.855
+[efficientnetv2s_D4n] e18 full val_acc=0.829 val_f1=0.826
+[efficientnetv2s_D4n] e19 full val_acc=0.867 val_f1=0.867
+[efficientnetv2s_D4n] e20 full val_acc=0.851 val_f1=0.850
+[efficientnetv2s_D4n] e21 full val_acc=0.848 val_f1=0.847
+[efficientnetv2s_D4n] e22 full val_acc=0.849 val_f1=0.849
+[efficientnetv2s_D4n] e23 full val_acc=0.855 val_f1=0.855
+[efficientnetv2s_D4n] e24 full val_acc=0.843 val_f1=0.844
+[efficientnetv2s_D4n] e25 full val_acc=0.860 val_f1=0.861
+[efficientnetv2s_D4n] early stop at epoch 25
+[efficientnetv2s_D4n] DONE test_acc=0.896 test_macro_f1=0.896 (36.4 min, 26 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[mobilenetv3small_D3n] e0 head val_acc=0.237 val_f1=0.237
+[mobilenetv3small_D3n] e1 head val_acc=0.276 val_f1=0.275
+[mobilenetv3small_D3n] e2 head val_acc=0.305 val_f1=0.302
+[mobilenetv3small_D3n] e3 full val_acc=0.484 val_f1=0.487
+[mobilenetv3small_D3n] e4 full val_acc=0.515 val_f1=0.497
+[mobilenetv3small_D3n] e5 full val_acc=0.651 val_f1=0.645
+[mobilenetv3small_D3n] e6 full val_acc=0.624 val_f1=0.613
+[mobilenetv3small_D3n] e7 full val_acc=0.687 val_f1=0.679
+[mobilenetv3small_D3n] e8 full val_acc=0.730 val_f1=0.736
+[mobilenetv3small_D3n] e9 full val_acc=0.746 val_f1=0.743
+[mobilenetv3small_D3n] e10 full val_acc=0.739 val_f1=0.741
+[mobilenetv3small_D3n] e11 full val_acc=0.719 val_f1=0.712
+[mobilenetv3small_D3n] e12 full val_acc=0.716 val_f1=0.714
+[mobilenetv3small_D3n] e13 full val_acc=0.599 val_f1=0.567
+[mobilenetv3small_D3n] e14 full val_acc=0.739 val_f1=0.734
+[mobilenetv3small_D3n] e15 full val_acc=0.767 val_f1=0.768
+[mobilenetv3small_D3n] e16 full val_acc=0.731 val_f1=0.729
+[mobilenetv3small_D3n] e17 full val_acc=0.780 val_f1=0.778
+[mobilenetv3small_D3n] e18 full val_acc=0.793 val_f1=0.791
+[mobilenetv3small_D3n] e19 full val_acc=0.767 val_f1=0.769
+[mobilenetv3small_D3n] e20 full val_acc=0.762 val_f1=0.762
+[mobilenetv3small_D3n] e21 full val_acc=0.776 val_f1=0.775
+[mobilenetv3small_D3n] e22 full val_acc=0.786 val_f1=0.784
+[mobilenetv3small_D3n] e23 full val_acc=0.800 val_f1=0.801
+[mobilenetv3small_D3n] e24 full val_acc=0.792 val_f1=0.793
+[mobilenetv3small_D3n] e25 full val_acc=0.765 val_f1=0.761
+[mobilenetv3small_D3n] e26 full val_acc=0.798 val_f1=0.799
+[mobilenetv3small_D3n] e27 full val_acc=0.780 val_f1=0.780
+[mobilenetv3small_D3n] e28 full val_acc=0.786 val_f1=0.783
+[mobilenetv3small_D3n] e29 full val_acc=0.772 val_f1=0.770
+[mobilenetv3small_D3n] early stop at epoch 29
+[mobilenetv3small_D3n] DONE test_acc=0.804 test_macro_f1=0.805 (34.5 min, 30 epochs)
+[device] cuda
+[mobilenetv3small_D4n] e0 head val_acc=0.235 val_f1=0.236
+[mobilenetv3small_D4n] e1 head val_acc=0.270 val_f1=0.271
+[mobilenetv3small_D4n] e2 head val_acc=0.297 val_f1=0.294
+[mobilenetv3small_D4n] e3 full val_acc=0.483 val_f1=0.457
+[mobilenetv3small_D4n] e4 full val_acc=0.606 val_f1=0.592
+[mobilenetv3small_D4n] e5 full val_acc=0.708 val_f1=0.708
+[mobilenetv3small_D4n] e6 full val_acc=0.679 val_f1=0.676
+[mobilenetv3small_D4n] e7 full val_acc=0.699 val_f1=0.700
+[mobilenetv3small_D4n] e8 full val_acc=0.737 val_f1=0.742
+[mobilenetv3small_D4n] e9 full val_acc=0.728 val_f1=0.727
+[mobilenetv3small_D4n] e10 full val_acc=0.688 val_f1=0.689
+[mobilenetv3small_D4n] e11 full val_acc=0.741 val_f1=0.738
+[mobilenetv3small_D4n] e12 full val_acc=0.595 val_f1=0.558
+[mobilenetv3small_D4n] e13 full val_acc=0.749 val_f1=0.748
+[mobilenetv3small_D4n] e14 full val_acc=0.762 val_f1=0.761
+[mobilenetv3small_D4n] e15 full val_acc=0.794 val_f1=0.794
+[mobilenetv3small_D4n] e16 full val_acc=0.769 val_f1=0.767
+[mobilenetv3small_D4n] e17 full val_acc=0.782 val_f1=0.784
+[mobilenetv3small_D4n] e18 full val_acc=0.789 val_f1=0.787
+[mobilenetv3small_D4n] e19 full val_acc=0.798 val_f1=0.794
+[mobilenetv3small_D4n] e20 full val_acc=0.789 val_f1=0.786
+[mobilenetv3small_D4n] e21 full val_acc=0.788 val_f1=0.787
+[mobilenetv3small_D4n] early stop at epoch 21
+[mobilenetv3small_D4n] DONE test_acc=0.811 test_macro_f1=0.810 (25.3 min, 22 epochs)
+[device] cuda
+[swint_D3n] e0 head val_acc=0.344 val_f1=0.298
+[swint_D3n] e1 head val_acc=0.444 val_f1=0.438
+[swint_D3n] e2 head val_acc=0.442 val_f1=0.421
+[swint_D3n] e3 full val_acc=0.583 val_f1=0.590
+[swint_D3n] e4 full val_acc=0.763 val_f1=0.763
+[swint_D3n] e5 full val_acc=0.762 val_f1=0.741
+[swint_D3n] e6 full val_acc=0.780 val_f1=0.782
+[swint_D3n] e7 full val_acc=0.800 val_f1=0.799
+[swint_D3n] e8 full val_acc=0.817 val_f1=0.819
+[swint_D3n] e9 full val_acc=0.763 val_f1=0.769
+[swint_D3n] e10 full val_acc=0.813 val_f1=0.813
+[swint_D3n] e11 full val_acc=0.831 val_f1=0.832
+[swint_D3n] e12 full val_acc=0.784 val_f1=0.785
+[swint_D3n] e13 full val_acc=0.823 val_f1=0.823
+[swint_D3n] e14 full val_acc=0.806 val_f1=0.807
+[swint_D3n] e15 full val_acc=0.796 val_f1=0.794
+[swint_D3n] e16 full val_acc=0.833 val_f1=0.833
+[swint_D3n] e17 full val_acc=0.819 val_f1=0.819
+[swint_D3n] e18 full val_acc=0.833 val_f1=0.836
+[swint_D3n] e19 full val_acc=0.831 val_f1=0.830
+[swint_D3n] e20 full val_acc=0.833 val_f1=0.834
+[swint_D3n] e21 full val_acc=0.835 val_f1=0.834
+[swint_D3n] e22 full val_acc=0.813 val_f1=0.815
+[swint_D3n] e23 full val_acc=0.808 val_f1=0.807
+[swint_D3n] e24 full val_acc=0.824 val_f1=0.824
+[swint_D3n] early stop at epoch 24
+[swint_D3n] DONE test_acc=0.862 test_macro_f1=0.866 (33.3 min, 25 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[swint_D4n] e0 head val_acc=0.351 val_f1=0.310
+[swint_D4n] e1 head val_acc=0.442 val_f1=0.441
+[swint_D4n] e2 head val_acc=0.441 val_f1=0.429
+[swint_D4n] e3 full val_acc=0.543 val_f1=0.539
+[swint_D4n] e4 full val_acc=0.722 val_f1=0.708
+[swint_D4n] e5 full val_acc=0.722 val_f1=0.707
+[swint_D4n] e6 full val_acc=0.794 val_f1=0.797
+[swint_D4n] e7 full val_acc=0.808 val_f1=0.811
+[swint_D4n] e8 full val_acc=0.813 val_f1=0.813
+[swint_D4n] e9 full val_acc=0.819 val_f1=0.821
+[swint_D4n] e10 full val_acc=0.820 val_f1=0.819
+[swint_D4n] e11 full val_acc=0.812 val_f1=0.811
+[swint_D4n] e12 full val_acc=0.805 val_f1=0.802
+[swint_D4n] e13 full val_acc=0.828 val_f1=0.825
+[swint_D4n] e14 full val_acc=0.837 val_f1=0.839
+[swint_D4n] e15 full val_acc=0.786 val_f1=0.787
+[swint_D4n] e16 full val_acc=0.843 val_f1=0.842
+[swint_D4n] e17 full val_acc=0.769 val_f1=0.765
+[swint_D4n] e18 full val_acc=0.840 val_f1=0.841
+[swint_D4n] e19 full val_acc=0.825 val_f1=0.821
+[swint_D4n] e20 full val_acc=0.837 val_f1=0.837
+[swint_D4n] e21 full val_acc=0.845 val_f1=0.847
+[swint_D4n] e22 full val_acc=0.829 val_f1=0.829
+[swint_D4n] e23 full val_acc=0.828 val_f1=0.829
+[swint_D4n] e24 full val_acc=0.835 val_f1=0.833
+[swint_D4n] e25 full val_acc=0.853 val_f1=0.852
+[swint_D4n] e26 full val_acc=0.831 val_f1=0.833
+[swint_D4n] e27 full val_acc=0.836 val_f1=0.835
+[swint_D4n] e28 full val_acc=0.815 val_f1=0.818
+[swint_D4n] e29 full val_acc=0.805 val_f1=0.805
+[swint_D4n] DONE test_acc=0.880 test_macro_f1=0.880 (40.2 min, 30 epochs)
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D3n --batch-size 32 --epochs 30 --output-dir results_align_ablation --seed 42 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D4n --batch-size 32 --epochs 30 --output-dir results_align_ablation --seed 42 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D3n --batch-size 16 --epochs 30 --output-dir results_align_ablation --seed 42 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D4n --batch-size 16 --epochs 30 --output-dir results_align_ablation --seed 42 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D3n --batch-size 32 --epochs 30 --output-dir results_align_ablation --seed 42 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D4n --batch-size 32 --epochs 30 --output-dir results_align_ablation --seed 42 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D3n --batch-size 16 --epochs 30 --output-dir results_align_ablation --seed 42 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D4n --batch-size 16 --epochs 30 --output-dir results_align_ablation --seed 42 --num-workers 6
+[summary] wrote results_align_ablation\summary.csv (8 runs)
+
+[Tier 1  alignment ablation] complete - 4.9 h elapsed
+
+========================================================================
+Tier 2a seed 123  ->  results_seed123/   (seed 123, 16 runs)
+started 2026-08-12 03:53:02
+========================================================================
+[device] cuda
+[resnet50_D1] e0 head val_acc=0.356 val_f1=0.326
+[resnet50_D1] e1 head val_acc=0.390 val_f1=0.375
+[resnet50_D1] e2 head val_acc=0.401 val_f1=0.391
+[resnet50_D1] e3 full val_acc=0.474 val_f1=0.471
+[resnet50_D1] e4 full val_acc=0.550 val_f1=0.543
+[resnet50_D1] e5 full val_acc=0.589 val_f1=0.587
+[resnet50_D1] e6 full val_acc=0.614 val_f1=0.612
+[resnet50_D1] e7 full val_acc=0.613 val_f1=0.612
+[resnet50_D1] e8 full val_acc=0.647 val_f1=0.647
+[resnet50_D1] e9 full val_acc=0.642 val_f1=0.640
+[resnet50_D1] e10 full val_acc=0.642 val_f1=0.637
+[resnet50_D1] e11 full val_acc=0.645 val_f1=0.641
+[resnet50_D1] e12 full val_acc=0.661 val_f1=0.663
+[resnet50_D1] e13 full val_acc=0.676 val_f1=0.677
+[resnet50_D1] e14 full val_acc=0.665 val_f1=0.663
+[resnet50_D1] e15 full val_acc=0.664 val_f1=0.667
+[resnet50_D1] e16 full val_acc=0.667 val_f1=0.665
+[resnet50_D1] e17 full val_acc=0.664 val_f1=0.662
+[resnet50_D1] e18 full val_acc=0.667 val_f1=0.666
+[resnet50_D1] e19 full val_acc=0.681 val_f1=0.681
+[resnet50_D1] e20 full val_acc=0.649 val_f1=0.647
+[resnet50_D1] e21 full val_acc=0.668 val_f1=0.669
+[resnet50_D1] e22 full val_acc=0.675 val_f1=0.676
+[resnet50_D1] e23 full val_acc=0.660 val_f1=0.658
+[resnet50_D1] e24 full val_acc=0.671 val_f1=0.669
+[resnet50_D1] e25 full val_acc=0.669 val_f1=0.667
+[resnet50_D1] early stop at epoch 25
+[resnet50_D1] DONE test_acc=0.673 test_macro_f1=0.673 (30.6 min, 26 epochs)
+[device] cuda
+[resnet50_D2] e0 head val_acc=0.347 val_f1=0.328
+[resnet50_D2] e1 head val_acc=0.372 val_f1=0.353
+[resnet50_D2] e2 head val_acc=0.376 val_f1=0.365
+[resnet50_D2] e3 full val_acc=0.465 val_f1=0.460
+[resnet50_D2] e4 full val_acc=0.542 val_f1=0.540
+[resnet50_D2] e5 full val_acc=0.601 val_f1=0.601
+[resnet50_D2] e6 full val_acc=0.636 val_f1=0.636
+[resnet50_D2] e7 full val_acc=0.655 val_f1=0.654
+[resnet50_D2] e8 full val_acc=0.683 val_f1=0.682
+[resnet50_D2] e9 full val_acc=0.684 val_f1=0.685
+[resnet50_D2] e10 full val_acc=0.688 val_f1=0.689
+[resnet50_D2] e11 full val_acc=0.698 val_f1=0.695
+[resnet50_D2] e12 full val_acc=0.679 val_f1=0.679
+[resnet50_D2] e13 full val_acc=0.702 val_f1=0.701
+[resnet50_D2] e14 full val_acc=0.704 val_f1=0.705
+[resnet50_D2] e15 full val_acc=0.681 val_f1=0.682
+[resnet50_D2] e16 full val_acc=0.700 val_f1=0.701
+[resnet50_D2] e17 full val_acc=0.719 val_f1=0.719
+[resnet50_D2] e18 full val_acc=0.688 val_f1=0.690
+[resnet50_D2] e19 full val_acc=0.692 val_f1=0.694
+[resnet50_D2] e20 full val_acc=0.706 val_f1=0.705
+[resnet50_D2] e21 full val_acc=0.704 val_f1=0.703
+[resnet50_D2] e22 full val_acc=0.707 val_f1=0.707
+[resnet50_D2] e23 full val_acc=0.711 val_f1=0.710
+[resnet50_D2] early stop at epoch 23
+[resnet50_D2] DONE test_acc=0.723 test_macro_f1=0.723 (28.4 min, 24 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[resnet50_D3] e0 head val_acc=0.335 val_f1=0.307
+[resnet50_D3] e1 head val_acc=0.367 val_f1=0.341
+[resnet50_D3] e2 head val_acc=0.382 val_f1=0.363
+[resnet50_D3] e3 full val_acc=0.466 val_f1=0.459
+[resnet50_D3] e4 full val_acc=0.530 val_f1=0.524
+[resnet50_D3] e5 full val_acc=0.573 val_f1=0.565
+[resnet50_D3] e6 full val_acc=0.637 val_f1=0.634
+[resnet50_D3] e7 full val_acc=0.679 val_f1=0.678
+[resnet50_D3] e8 full val_acc=0.698 val_f1=0.694
+[resnet50_D3] e9 full val_acc=0.699 val_f1=0.697
+[resnet50_D3] e10 full val_acc=0.726 val_f1=0.722
+[resnet50_D3] e11 full val_acc=0.759 val_f1=0.757
+[resnet50_D3] e12 full val_acc=0.769 val_f1=0.770
+[resnet50_D3] e13 full val_acc=0.774 val_f1=0.775
+[resnet50_D3] e14 full val_acc=0.781 val_f1=0.781
+[resnet50_D3] e15 full val_acc=0.797 val_f1=0.797
+[resnet50_D3] e16 full val_acc=0.806 val_f1=0.807
+[resnet50_D3] e17 full val_acc=0.806 val_f1=0.807
+[resnet50_D3] e18 full val_acc=0.798 val_f1=0.798
+[resnet50_D3] e19 full val_acc=0.794 val_f1=0.794
+[resnet50_D3] e20 full val_acc=0.816 val_f1=0.815
+[resnet50_D3] e21 full val_acc=0.817 val_f1=0.817
+[resnet50_D3] e22 full val_acc=0.810 val_f1=0.812
+[resnet50_D3] e23 full val_acc=0.824 val_f1=0.825
+[resnet50_D3] e24 full val_acc=0.827 val_f1=0.827
+[resnet50_D3] e25 full val_acc=0.820 val_f1=0.821
+[resnet50_D3] e26 full val_acc=0.836 val_f1=0.836
+[resnet50_D3] e27 full val_acc=0.825 val_f1=0.825
+[resnet50_D3] e28 full val_acc=0.837 val_f1=0.838
+[resnet50_D3] e29 full val_acc=0.831 val_f1=0.831
+[resnet50_D3] DONE test_acc=0.848 test_macro_f1=0.847 (36.8 min, 30 epochs)
+[device] cuda
+[resnet50_D4] e0 head val_acc=0.345 val_f1=0.318
+[resnet50_D4] e1 head val_acc=0.353 val_f1=0.332
+[resnet50_D4] e2 head val_acc=0.401 val_f1=0.387
+[resnet50_D4] e3 full val_acc=0.462 val_f1=0.459
+[resnet50_D4] e4 full val_acc=0.511 val_f1=0.507
+[resnet50_D4] e5 full val_acc=0.569 val_f1=0.564
+[resnet50_D4] e6 full val_acc=0.602 val_f1=0.598
+[resnet50_D4] e7 full val_acc=0.647 val_f1=0.644
+[resnet50_D4] e8 full val_acc=0.661 val_f1=0.656
+[resnet50_D4] e9 full val_acc=0.716 val_f1=0.715
+[resnet50_D4] e10 full val_acc=0.723 val_f1=0.721
+[resnet50_D4] e11 full val_acc=0.747 val_f1=0.747
+[resnet50_D4] e12 full val_acc=0.755 val_f1=0.756
+[resnet50_D4] e13 full val_acc=0.750 val_f1=0.751
+[resnet50_D4] e14 full val_acc=0.757 val_f1=0.757
+[resnet50_D4] e15 full val_acc=0.789 val_f1=0.790
+[resnet50_D4] e16 full val_acc=0.801 val_f1=0.801
+[resnet50_D4] e17 full val_acc=0.794 val_f1=0.795
+[resnet50_D4] e18 full val_acc=0.804 val_f1=0.803
+[resnet50_D4] e19 full val_acc=0.800 val_f1=0.800
+[resnet50_D4] e20 full val_acc=0.789 val_f1=0.789
+[resnet50_D4] e21 full val_acc=0.815 val_f1=0.815
+[resnet50_D4] e22 full val_acc=0.810 val_f1=0.812
+[resnet50_D4] e23 full val_acc=0.815 val_f1=0.816
+[resnet50_D4] e24 full val_acc=0.810 val_f1=0.811
+[resnet50_D4] e25 full val_acc=0.835 val_f1=0.835
+[resnet50_D4] e26 full val_acc=0.845 val_f1=0.846
+[resnet50_D4] e27 full val_acc=0.841 val_f1=0.842
+[resnet50_D4] e28 full val_acc=0.855 val_f1=0.855
+[resnet50_D4] e29 full val_acc=0.836 val_f1=0.837
+[resnet50_D4] DONE test_acc=0.854 test_macro_f1=0.855 (36.7 min, 30 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D1] e0 head val_acc=0.276 val_f1=0.274
+[efficientnetv2s_D1] e1 head val_acc=0.304 val_f1=0.302
+[efficientnetv2s_D1] e2 head val_acc=0.331 val_f1=0.328
+[efficientnetv2s_D1] e3 full val_acc=0.582 val_f1=0.576
+[efficientnetv2s_D1] e4 full val_acc=0.648 val_f1=0.645
+[efficientnetv2s_D1] e5 full val_acc=0.681 val_f1=0.681
+[efficientnetv2s_D1] e6 full val_acc=0.696 val_f1=0.697
+[efficientnetv2s_D1] e7 full val_acc=0.681 val_f1=0.676
+[efficientnetv2s_D1] e8 full val_acc=0.726 val_f1=0.725
+[efficientnetv2s_D1] e9 full val_acc=0.730 val_f1=0.729
+[efficientnetv2s_D1] e10 full val_acc=0.715 val_f1=0.712
+[efficientnetv2s_D1] e11 full val_acc=0.751 val_f1=0.751
+[efficientnetv2s_D1] e12 full val_acc=0.738 val_f1=0.740
+[efficientnetv2s_D1] e13 full val_acc=0.733 val_f1=0.733
+[efficientnetv2s_D1] e14 full val_acc=0.738 val_f1=0.739
+[efficientnetv2s_D1] e15 full val_acc=0.746 val_f1=0.745
+[efficientnetv2s_D1] e16 full val_acc=0.735 val_f1=0.733
+[efficientnetv2s_D1] e17 full val_acc=0.741 val_f1=0.740
+[efficientnetv2s_D1] early stop at epoch 17
+[efficientnetv2s_D1] DONE test_acc=0.752 test_macro_f1=0.753 (24.1 min, 18 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D2] e0 head val_acc=0.259 val_f1=0.255
+[efficientnetv2s_D2] e1 head val_acc=0.310 val_f1=0.309
+[efficientnetv2s_D2] e2 head val_acc=0.324 val_f1=0.321
+[efficientnetv2s_D2] e3 full val_acc=0.629 val_f1=0.627
+[efficientnetv2s_D2] e4 full val_acc=0.695 val_f1=0.697
+[efficientnetv2s_D2] e5 full val_acc=0.754 val_f1=0.757
+[efficientnetv2s_D2] e6 full val_acc=0.776 val_f1=0.775
+[efficientnetv2s_D2] e7 full val_acc=0.738 val_f1=0.738
+[efficientnetv2s_D2] e8 full val_acc=0.788 val_f1=0.788
+[efficientnetv2s_D2] e9 full val_acc=0.813 val_f1=0.811
+[efficientnetv2s_D2] e10 full val_acc=0.759 val_f1=0.754
+[efficientnetv2s_D2] e11 full val_acc=0.786 val_f1=0.783
+[efficientnetv2s_D2] e12 full val_acc=0.802 val_f1=0.802
+[efficientnetv2s_D2] e13 full val_acc=0.809 val_f1=0.807
+[efficientnetv2s_D2] e14 full val_acc=0.821 val_f1=0.821
+[efficientnetv2s_D2] e15 full val_acc=0.823 val_f1=0.823
+[efficientnetv2s_D2] e16 full val_acc=0.809 val_f1=0.809
+[efficientnetv2s_D2] e17 full val_acc=0.810 val_f1=0.809
+[efficientnetv2s_D2] e18 full val_acc=0.847 val_f1=0.847
+[efficientnetv2s_D2] e19 full val_acc=0.820 val_f1=0.819
+[efficientnetv2s_D2] e20 full val_acc=0.823 val_f1=0.823
+[efficientnetv2s_D2] e21 full val_acc=0.815 val_f1=0.813
+[efficientnetv2s_D2] e22 full val_acc=0.836 val_f1=0.836
+[efficientnetv2s_D2] e23 full val_acc=0.809 val_f1=0.811
+[efficientnetv2s_D2] e24 full val_acc=0.844 val_f1=0.845
+[efficientnetv2s_D2] early stop at epoch 24
+[efficientnetv2s_D2] DONE test_acc=0.854 test_macro_f1=0.854 (34.2 min, 25 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D3] e0 head val_acc=0.261 val_f1=0.258
+[efficientnetv2s_D3] e1 head val_acc=0.296 val_f1=0.290
+[efficientnetv2s_D3] e2 head val_acc=0.327 val_f1=0.321
+[efficientnetv2s_D3] e3 full val_acc=0.579 val_f1=0.576
+[efficientnetv2s_D3] e4 full val_acc=0.754 val_f1=0.751
+[efficientnetv2s_D3] e5 full val_acc=0.758 val_f1=0.758
+[efficientnetv2s_D3] e6 full val_acc=0.802 val_f1=0.803
+[efficientnetv2s_D3] e7 full val_acc=0.823 val_f1=0.824
+[efficientnetv2s_D3] e8 full val_acc=0.832 val_f1=0.832
+[efficientnetv2s_D3] e9 full val_acc=0.831 val_f1=0.831
+[efficientnetv2s_D3] e10 full val_acc=0.856 val_f1=0.855
+[efficientnetv2s_D3] e11 full val_acc=0.839 val_f1=0.840
+[efficientnetv2s_D3] e12 full val_acc=0.819 val_f1=0.820
+[efficientnetv2s_D3] e13 full val_acc=0.841 val_f1=0.842
+[efficientnetv2s_D3] e14 full val_acc=0.858 val_f1=0.856
+[efficientnetv2s_D3] e15 full val_acc=0.849 val_f1=0.850
+[efficientnetv2s_D3] e16 full val_acc=0.863 val_f1=0.863
+[efficientnetv2s_D3] e17 full val_acc=0.863 val_f1=0.863
+[efficientnetv2s_D3] e18 full val_acc=0.863 val_f1=0.864
+[efficientnetv2s_D3] e19 full val_acc=0.864 val_f1=0.864
+[efficientnetv2s_D3] e20 full val_acc=0.864 val_f1=0.865
+[efficientnetv2s_D3] e21 full val_acc=0.859 val_f1=0.858
+[efficientnetv2s_D3] e22 full val_acc=0.840 val_f1=0.840
+[efficientnetv2s_D3] e23 full val_acc=0.851 val_f1=0.850
+[efficientnetv2s_D3] e24 full val_acc=0.855 val_f1=0.856
+[efficientnetv2s_D3] e25 full val_acc=0.855 val_f1=0.855
+[efficientnetv2s_D3] e26 full val_acc=0.844 val_f1=0.846
+[efficientnetv2s_D3] early stop at epoch 26
+[efficientnetv2s_D3] DONE test_acc=0.864 test_macro_f1=0.864 (38.1 min, 27 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D4] e0 head val_acc=0.313 val_f1=0.311
+[efficientnetv2s_D4] e1 head val_acc=0.323 val_f1=0.321
+[efficientnetv2s_D4] e2 head val_acc=0.336 val_f1=0.332
+[efficientnetv2s_D4] e3 full val_acc=0.625 val_f1=0.625
+[efficientnetv2s_D4] e4 full val_acc=0.772 val_f1=0.772
+[efficientnetv2s_D4] e5 full val_acc=0.810 val_f1=0.810
+[efficientnetv2s_D4] e6 full val_acc=0.805 val_f1=0.805
+[efficientnetv2s_D4] e7 full val_acc=0.829 val_f1=0.830
+[efficientnetv2s_D4] e8 full val_acc=0.833 val_f1=0.834
+[efficientnetv2s_D4] e9 full val_acc=0.819 val_f1=0.819
+[efficientnetv2s_D4] e10 full val_acc=0.817 val_f1=0.815
+[efficientnetv2s_D4] e11 full val_acc=0.835 val_f1=0.835
+[efficientnetv2s_D4] e12 full val_acc=0.849 val_f1=0.850
+[efficientnetv2s_D4] e13 full val_acc=0.843 val_f1=0.842
+[efficientnetv2s_D4] e14 full val_acc=0.845 val_f1=0.846
+[efficientnetv2s_D4] e15 full val_acc=0.876 val_f1=0.876
+[efficientnetv2s_D4] e16 full val_acc=0.836 val_f1=0.836
+[efficientnetv2s_D4] e17 full val_acc=0.855 val_f1=0.854
+[efficientnetv2s_D4] e18 full val_acc=0.860 val_f1=0.860
+[efficientnetv2s_D4] e19 full val_acc=0.867 val_f1=0.867
+[efficientnetv2s_D4] e20 full val_acc=0.868 val_f1=0.869
+[efficientnetv2s_D4] e21 full val_acc=0.866 val_f1=0.865
+[efficientnetv2s_D4] early stop at epoch 21
+[efficientnetv2s_D4] DONE test_acc=0.892 test_macro_f1=0.892 (30.9 min, 22 epochs)
+[device] cuda
+[mobilenetv3small_D1] e0 head val_acc=0.269 val_f1=0.268
+[mobilenetv3small_D1] e1 head val_acc=0.313 val_f1=0.314
+[mobilenetv3small_D1] e2 head val_acc=0.325 val_f1=0.326
+[mobilenetv3small_D1] e3 full val_acc=0.445 val_f1=0.421
+[mobilenetv3small_D1] e4 full val_acc=0.496 val_f1=0.482
+[mobilenetv3small_D1] e5 full val_acc=0.581 val_f1=0.585
+[mobilenetv3small_D1] e6 full val_acc=0.585 val_f1=0.580
+[mobilenetv3small_D1] e7 full val_acc=0.548 val_f1=0.543
+[mobilenetv3small_D1] e8 full val_acc=0.503 val_f1=0.484
+[mobilenetv3small_D1] e9 full val_acc=0.565 val_f1=0.570
+[mobilenetv3small_D1] e10 full val_acc=0.605 val_f1=0.601
+[mobilenetv3small_D1] e11 full val_acc=0.598 val_f1=0.594
+[mobilenetv3small_D1] e12 full val_acc=0.630 val_f1=0.621
+[mobilenetv3small_D1] e13 full val_acc=0.591 val_f1=0.595
+[mobilenetv3small_D1] e14 full val_acc=0.589 val_f1=0.572
+[mobilenetv3small_D1] e15 full val_acc=0.603 val_f1=0.605
+[mobilenetv3small_D1] e16 full val_acc=0.624 val_f1=0.618
+[mobilenetv3small_D1] e17 full val_acc=0.542 val_f1=0.525
+[mobilenetv3small_D1] e18 full val_acc=0.601 val_f1=0.584
+[mobilenetv3small_D1] early stop at epoch 18
+[mobilenetv3small_D1] DONE test_acc=0.663 test_macro_f1=0.653 (18.2 min, 19 epochs)
+[device] cuda
+[mobilenetv3small_D2] e0 head val_acc=0.259 val_f1=0.260
+[mobilenetv3small_D2] e1 head val_acc=0.306 val_f1=0.307
+[mobilenetv3small_D2] e2 head val_acc=0.333 val_f1=0.333
+[mobilenetv3small_D2] e3 full val_acc=0.507 val_f1=0.500
+[mobilenetv3small_D2] e4 full val_acc=0.563 val_f1=0.555
+[mobilenetv3small_D2] e5 full val_acc=0.645 val_f1=0.641
+[mobilenetv3small_D2] e6 full val_acc=0.685 val_f1=0.686
+[mobilenetv3small_D2] e7 full val_acc=0.632 val_f1=0.628
+[mobilenetv3small_D2] e8 full val_acc=0.685 val_f1=0.692
+[mobilenetv3small_D2] e9 full val_acc=0.653 val_f1=0.651
+[mobilenetv3small_D2] e10 full val_acc=0.716 val_f1=0.716
+[mobilenetv3small_D2] e11 full val_acc=0.733 val_f1=0.730
+[mobilenetv3small_D2] e12 full val_acc=0.743 val_f1=0.741
+[mobilenetv3small_D2] e13 full val_acc=0.711 val_f1=0.710
+[mobilenetv3small_D2] e14 full val_acc=0.737 val_f1=0.733
+[mobilenetv3small_D2] e15 full val_acc=0.657 val_f1=0.648
+[mobilenetv3small_D2] e16 full val_acc=0.731 val_f1=0.731
+[mobilenetv3small_D2] e17 full val_acc=0.754 val_f1=0.754
+[mobilenetv3small_D2] e18 full val_acc=0.735 val_f1=0.734
+[mobilenetv3small_D2] e19 full val_acc=0.769 val_f1=0.769
+[mobilenetv3small_D2] e20 full val_acc=0.731 val_f1=0.729
+[mobilenetv3small_D2] e21 full val_acc=0.774 val_f1=0.776
+[mobilenetv3small_D2] e22 full val_acc=0.759 val_f1=0.761
+[mobilenetv3small_D2] e23 full val_acc=0.742 val_f1=0.738
+[mobilenetv3small_D2] e24 full val_acc=0.761 val_f1=0.759
+[mobilenetv3small_D2] e25 full val_acc=0.762 val_f1=0.761
+[mobilenetv3small_D2] e26 full val_acc=0.770 val_f1=0.772
+[mobilenetv3small_D2] e27 full val_acc=0.738 val_f1=0.738
+[mobilenetv3small_D2] early stop at epoch 27
+[mobilenetv3small_D2] DONE test_acc=0.779 test_macro_f1=0.779 (28.2 min, 28 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[mobilenetv3small_D3] e0 head val_acc=0.269 val_f1=0.267
+[mobilenetv3small_D3] e1 head val_acc=0.305 val_f1=0.303
+[mobilenetv3small_D3] e2 head val_acc=0.319 val_f1=0.319
+[mobilenetv3small_D3] e3 full val_acc=0.450 val_f1=0.438
+[mobilenetv3small_D3] e4 full val_acc=0.555 val_f1=0.556
+[mobilenetv3small_D3] e5 full val_acc=0.660 val_f1=0.660
+[mobilenetv3small_D3] e6 full val_acc=0.645 val_f1=0.631
+[mobilenetv3small_D3] e7 full val_acc=0.684 val_f1=0.676
+[mobilenetv3small_D3] e8 full val_acc=0.692 val_f1=0.696
+[mobilenetv3small_D3] e9 full val_acc=0.691 val_f1=0.692
+[mobilenetv3small_D3] e10 full val_acc=0.754 val_f1=0.758
+[mobilenetv3small_D3] e11 full val_acc=0.644 val_f1=0.636
+[mobilenetv3small_D3] e12 full val_acc=0.742 val_f1=0.743
+[mobilenetv3small_D3] e13 full val_acc=0.741 val_f1=0.735
+[mobilenetv3small_D3] e14 full val_acc=0.724 val_f1=0.725
+[mobilenetv3small_D3] e15 full val_acc=0.758 val_f1=0.761
+[mobilenetv3small_D3] e16 full val_acc=0.770 val_f1=0.771
+[mobilenetv3small_D3] e17 full val_acc=0.785 val_f1=0.785
+[mobilenetv3small_D3] e18 full val_acc=0.758 val_f1=0.751
+[mobilenetv3small_D3] e19 full val_acc=0.788 val_f1=0.785
+[mobilenetv3small_D3] e20 full val_acc=0.781 val_f1=0.782
+[mobilenetv3small_D3] e21 full val_acc=0.800 val_f1=0.798
+[mobilenetv3small_D3] e22 full val_acc=0.810 val_f1=0.811
+[mobilenetv3small_D3] e23 full val_acc=0.776 val_f1=0.777
+[mobilenetv3small_D3] e24 full val_acc=0.776 val_f1=0.778
+[mobilenetv3small_D3] e25 full val_acc=0.785 val_f1=0.790
+[mobilenetv3small_D3] e26 full val_acc=0.812 val_f1=0.811
+[mobilenetv3small_D3] e27 full val_acc=0.761 val_f1=0.766
+[mobilenetv3small_D3] e28 full val_acc=0.757 val_f1=0.759
+[mobilenetv3small_D3] early stop at epoch 28
+[mobilenetv3small_D3] DONE test_acc=0.829 test_macro_f1=0.829 (34.2 min, 29 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[mobilenetv3small_D4] e0 head val_acc=0.274 val_f1=0.271
+[mobilenetv3small_D4] e1 head val_acc=0.297 val_f1=0.297
+[mobilenetv3small_D4] e2 head val_acc=0.317 val_f1=0.318
+[mobilenetv3small_D4] e3 full val_acc=0.478 val_f1=0.466
+[mobilenetv3small_D4] e4 full val_acc=0.504 val_f1=0.492
+[mobilenetv3small_D4] e5 full val_acc=0.609 val_f1=0.611
+[mobilenetv3small_D4] e6 full val_acc=0.653 val_f1=0.649
+[mobilenetv3small_D4] e7 full val_acc=0.700 val_f1=0.695
+[mobilenetv3small_D4] e8 full val_acc=0.741 val_f1=0.745
+[mobilenetv3small_D4] e9 full val_acc=0.749 val_f1=0.744
+[mobilenetv3small_D4] e10 full val_acc=0.755 val_f1=0.752
+[mobilenetv3small_D4] e11 full val_acc=0.762 val_f1=0.761
+[mobilenetv3small_D4] e12 full val_acc=0.755 val_f1=0.759
+[mobilenetv3small_D4] e13 full val_acc=0.750 val_f1=0.747
+[mobilenetv3small_D4] e14 full val_acc=0.745 val_f1=0.742
+[mobilenetv3small_D4] e15 full val_acc=0.792 val_f1=0.792
+[mobilenetv3small_D4] e16 full val_acc=0.778 val_f1=0.780
+[mobilenetv3small_D4] e17 full val_acc=0.780 val_f1=0.780
+[mobilenetv3small_D4] e18 full val_acc=0.753 val_f1=0.749
+[mobilenetv3small_D4] e19 full val_acc=0.800 val_f1=0.801
+[mobilenetv3small_D4] e20 full val_acc=0.816 val_f1=0.817
+[mobilenetv3small_D4] e21 full val_acc=0.757 val_f1=0.756
+[mobilenetv3small_D4] e22 full val_acc=0.794 val_f1=0.795
+[mobilenetv3small_D4] e23 full val_acc=0.804 val_f1=0.803
+[mobilenetv3small_D4] e24 full val_acc=0.772 val_f1=0.771
+[mobilenetv3small_D4] e25 full val_acc=0.789 val_f1=0.788
+[mobilenetv3small_D4] e26 full val_acc=0.778 val_f1=0.780
+[mobilenetv3small_D4] early stop at epoch 26
+[mobilenetv3small_D4] DONE test_acc=0.803 test_macro_f1=0.804 (31.5 min, 27 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[swint_D1] e0 head val_acc=0.375 val_f1=0.360
+[swint_D1] e1 head val_acc=0.383 val_f1=0.366
+[swint_D1] e2 head val_acc=0.409 val_f1=0.396
+[swint_D1] e3 full val_acc=0.536 val_f1=0.511
+[swint_D1] e4 full val_acc=0.574 val_f1=0.591
+[swint_D1] e5 full val_acc=0.688 val_f1=0.684
+[swint_D1] e6 full val_acc=0.583 val_f1=0.593
+[swint_D1] e7 full val_acc=0.638 val_f1=0.641
+[swint_D1] e8 full val_acc=0.669 val_f1=0.657
+[swint_D1] e9 full val_acc=0.629 val_f1=0.611
+[swint_D1] e10 full val_acc=0.598 val_f1=0.596
+[swint_D1] e11 full val_acc=0.683 val_f1=0.687
+[swint_D1] e12 full val_acc=0.695 val_f1=0.695
+[swint_D1] e13 full val_acc=0.694 val_f1=0.693
+[swint_D1] e14 full val_acc=0.659 val_f1=0.660
+[swint_D1] e15 full val_acc=0.671 val_f1=0.651
+[swint_D1] e16 full val_acc=0.636 val_f1=0.632
+[swint_D1] e17 full val_acc=0.676 val_f1=0.673
+[swint_D1] e18 full val_acc=0.638 val_f1=0.636
+[swint_D1] early stop at epoch 18
+[swint_D1] DONE test_acc=0.727 test_macro_f1=0.729 (24.6 min, 19 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[swint_D2] e0 head val_acc=0.415 val_f1=0.409
+[swint_D2] e1 head val_acc=0.444 val_f1=0.437
+[swint_D2] e2 head val_acc=0.438 val_f1=0.423
+[swint_D2] e3 full val_acc=0.624 val_f1=0.626
+[swint_D2] e4 full val_acc=0.723 val_f1=0.725
+[swint_D2] e5 full val_acc=0.759 val_f1=0.759
+[swint_D2] e6 full val_acc=0.743 val_f1=0.741
+[swint_D2] e7 full val_acc=0.788 val_f1=0.787
+[swint_D2] e8 full val_acc=0.680 val_f1=0.676
+[swint_D2] e9 full val_acc=0.781 val_f1=0.779
+[swint_D2] e10 full val_acc=0.782 val_f1=0.782
+[swint_D2] e11 full val_acc=0.781 val_f1=0.779
+[swint_D2] e12 full val_acc=0.786 val_f1=0.786
+[swint_D2] e13 full val_acc=0.812 val_f1=0.810
+[swint_D2] e14 full val_acc=0.788 val_f1=0.787
+[swint_D2] e15 full val_acc=0.774 val_f1=0.770
+[swint_D2] e16 full val_acc=0.788 val_f1=0.789
+[swint_D2] e17 full val_acc=0.766 val_f1=0.768
+[swint_D2] e18 full val_acc=0.769 val_f1=0.770
+[swint_D2] e19 full val_acc=0.757 val_f1=0.759
+[swint_D2] early stop at epoch 19
+[swint_D2] DONE test_acc=0.816 test_macro_f1=0.814 (26.4 min, 20 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[swint_D3] e0 head val_acc=0.406 val_f1=0.389
+[swint_D3] e1 head val_acc=0.429 val_f1=0.422
+[swint_D3] e2 head val_acc=0.427 val_f1=0.419
+[swint_D3] e3 full val_acc=0.526 val_f1=0.521
+[swint_D3] e4 full val_acc=0.618 val_f1=0.627
+[swint_D3] e5 full val_acc=0.702 val_f1=0.697
+[swint_D3] e6 full val_acc=0.773 val_f1=0.776
+[swint_D3] e7 full val_acc=0.778 val_f1=0.779
+[swint_D3] e8 full val_acc=0.758 val_f1=0.755
+[swint_D3] e9 full val_acc=0.690 val_f1=0.685
+[swint_D3] e10 full val_acc=0.824 val_f1=0.825
+[swint_D3] e11 full val_acc=0.802 val_f1=0.803
+[swint_D3] e12 full val_acc=0.831 val_f1=0.832
+[swint_D3] e13 full val_acc=0.776 val_f1=0.779
+[swint_D3] e14 full val_acc=0.840 val_f1=0.841
+[swint_D3] e15 full val_acc=0.831 val_f1=0.829
+[swint_D3] e16 full val_acc=0.833 val_f1=0.831
+[swint_D3] e17 full val_acc=0.837 val_f1=0.839
+[swint_D3] e18 full val_acc=0.831 val_f1=0.830
+[swint_D3] e19 full val_acc=0.817 val_f1=0.816
+[swint_D3] e20 full val_acc=0.820 val_f1=0.820
+[swint_D3] early stop at epoch 20
+[swint_D3] DONE test_acc=0.856 test_macro_f1=0.857 (28.8 min, 21 epochs)
+[device] cuda
+[swint_D4] e0 head val_acc=0.382 val_f1=0.366
+[swint_D4] e1 head val_acc=0.411 val_f1=0.398
+[swint_D4] e2 head val_acc=0.421 val_f1=0.410
+[swint_D4] e3 full val_acc=0.629 val_f1=0.626
+[swint_D4] e4 full val_acc=0.616 val_f1=0.623
+[swint_D4] e5 full val_acc=0.700 val_f1=0.704
+[swint_D4] e6 full val_acc=0.753 val_f1=0.754
+[swint_D4] e7 full val_acc=0.800 val_f1=0.798
+[swint_D4] e8 full val_acc=0.792 val_f1=0.794
+[swint_D4] e9 full val_acc=0.793 val_f1=0.793
+[swint_D4] e10 full val_acc=0.821 val_f1=0.819
+[swint_D4] e11 full val_acc=0.805 val_f1=0.807
+[swint_D4] e12 full val_acc=0.825 val_f1=0.825
+[swint_D4] e13 full val_acc=0.829 val_f1=0.832
+[swint_D4] e14 full val_acc=0.790 val_f1=0.792
+[swint_D4] e15 full val_acc=0.813 val_f1=0.811
+[swint_D4] e16 full val_acc=0.788 val_f1=0.783
+[swint_D4] e17 full val_acc=0.824 val_f1=0.824
+[swint_D4] e18 full val_acc=0.827 val_f1=0.827
+[swint_D4] e19 full val_acc=0.816 val_f1=0.818
+[swint_D4] early stop at epoch 19
+[swint_D4] DONE test_acc=0.854 test_macro_f1=0.856 (26.9 min, 20 epochs)
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D1 --batch-size 32 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D2 --batch-size 32 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D3 --batch-size 32 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D4 --batch-size 32 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D1 --batch-size 16 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D2 --batch-size 16 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D3 --batch-size 16 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D4 --batch-size 16 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D1 --batch-size 32 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D2 --batch-size 32 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D3 --batch-size 32 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D4 --batch-size 32 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D1 --batch-size 16 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D2 --batch-size 16 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D3 --batch-size 16 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D4 --batch-size 16 --epochs 30 --output-dir results_seed123 --seed 123 --num-workers 6
+[summary] wrote results_seed123\summary.csv (16 runs)
+
+[Tier 2a seed 123] complete - 13.1 h elapsed
+
+========================================================================
+Tier 2b seed 2025  ->  results_seed2025/   (seed 2025, 16 runs)
+started 2026-08-12 12:01:04
+========================================================================
+[device] cuda
+[resnet50_D1] e0 head val_acc=0.375 val_f1=0.333
+[resnet50_D1] e1 head val_acc=0.390 val_f1=0.376
+[resnet50_D1] e2 head val_acc=0.415 val_f1=0.416
+[resnet50_D1] e3 full val_acc=0.483 val_f1=0.475
+[resnet50_D1] e4 full val_acc=0.552 val_f1=0.550
+[resnet50_D1] e5 full val_acc=0.577 val_f1=0.576
+[resnet50_D1] e6 full val_acc=0.608 val_f1=0.610
+[resnet50_D1] e7 full val_acc=0.648 val_f1=0.647
+[resnet50_D1] e8 full val_acc=0.657 val_f1=0.653
+[resnet50_D1] e9 full val_acc=0.656 val_f1=0.657
+[resnet50_D1] e10 full val_acc=0.664 val_f1=0.661
+[resnet50_D1] e11 full val_acc=0.669 val_f1=0.668
+[resnet50_D1] e12 full val_acc=0.673 val_f1=0.675
+[resnet50_D1] e13 full val_acc=0.676 val_f1=0.677
+[resnet50_D1] e14 full val_acc=0.667 val_f1=0.664
+[resnet50_D1] e15 full val_acc=0.692 val_f1=0.691
+[resnet50_D1] e16 full val_acc=0.679 val_f1=0.680
+[resnet50_D1] e17 full val_acc=0.679 val_f1=0.677
+[resnet50_D1] e18 full val_acc=0.698 val_f1=0.697
+[resnet50_D1] e19 full val_acc=0.692 val_f1=0.690
+[resnet50_D1] e20 full val_acc=0.687 val_f1=0.686
+[resnet50_D1] e21 full val_acc=0.690 val_f1=0.690
+[resnet50_D1] e22 full val_acc=0.703 val_f1=0.702
+[resnet50_D1] e23 full val_acc=0.702 val_f1=0.703
+[resnet50_D1] e24 full val_acc=0.681 val_f1=0.682
+[resnet50_D1] e25 full val_acc=0.696 val_f1=0.697
+[resnet50_D1] e26 full val_acc=0.706 val_f1=0.707
+[resnet50_D1] e27 full val_acc=0.720 val_f1=0.720
+[resnet50_D1] e28 full val_acc=0.703 val_f1=0.705
+[resnet50_D1] e29 full val_acc=0.710 val_f1=0.708
+[resnet50_D1] DONE test_acc=0.686 test_macro_f1=0.683 (35.8 min, 30 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[resnet50_D2] e0 head val_acc=0.337 val_f1=0.301
+[resnet50_D2] e1 head val_acc=0.383 val_f1=0.370
+[resnet50_D2] e2 head val_acc=0.392 val_f1=0.388
+[resnet50_D2] e3 full val_acc=0.473 val_f1=0.469
+[resnet50_D2] e4 full val_acc=0.559 val_f1=0.556
+[resnet50_D2] e5 full val_acc=0.609 val_f1=0.606
+[resnet50_D2] e6 full val_acc=0.633 val_f1=0.632
+[resnet50_D2] e7 full val_acc=0.653 val_f1=0.655
+[resnet50_D2] e8 full val_acc=0.676 val_f1=0.676
+[resnet50_D2] e9 full val_acc=0.663 val_f1=0.664
+[resnet50_D2] e10 full val_acc=0.683 val_f1=0.683
+[resnet50_D2] e11 full val_acc=0.672 val_f1=0.675
+[resnet50_D2] e12 full val_acc=0.710 val_f1=0.710
+[resnet50_D2] e13 full val_acc=0.715 val_f1=0.716
+[resnet50_D2] e14 full val_acc=0.698 val_f1=0.696
+[resnet50_D2] e15 full val_acc=0.703 val_f1=0.703
+[resnet50_D2] e16 full val_acc=0.707 val_f1=0.708
+[resnet50_D2] e17 full val_acc=0.695 val_f1=0.694
+[resnet50_D2] e18 full val_acc=0.690 val_f1=0.692
+[resnet50_D2] e19 full val_acc=0.700 val_f1=0.701
+[resnet50_D2] early stop at epoch 19
+[resnet50_D2] DONE test_acc=0.737 test_macro_f1=0.737 (23.8 min, 20 epochs)
+[device] cuda
+[resnet50_D3] e0 head val_acc=0.306 val_f1=0.254
+[resnet50_D3] e1 head val_acc=0.370 val_f1=0.348
+[resnet50_D3] e2 head val_acc=0.376 val_f1=0.370
+[resnet50_D3] e3 full val_acc=0.453 val_f1=0.452
+[resnet50_D3] e4 full val_acc=0.512 val_f1=0.506
+[resnet50_D3] e5 full val_acc=0.554 val_f1=0.548
+[resnet50_D3] e6 full val_acc=0.609 val_f1=0.607
+[resnet50_D3] e7 full val_acc=0.656 val_f1=0.656
+[resnet50_D3] e8 full val_acc=0.698 val_f1=0.694
+[resnet50_D3] e9 full val_acc=0.726 val_f1=0.726
+[resnet50_D3] e10 full val_acc=0.751 val_f1=0.750
+[resnet50_D3] e11 full val_acc=0.770 val_f1=0.770
+[resnet50_D3] e12 full val_acc=0.772 val_f1=0.768
+[resnet50_D3] e13 full val_acc=0.784 val_f1=0.782
+[resnet50_D3] e14 full val_acc=0.793 val_f1=0.791
+[resnet50_D3] e15 full val_acc=0.800 val_f1=0.800
+[resnet50_D3] e16 full val_acc=0.813 val_f1=0.813
+[resnet50_D3] e17 full val_acc=0.802 val_f1=0.804
+[resnet50_D3] e18 full val_acc=0.824 val_f1=0.824
+[resnet50_D3] e19 full val_acc=0.817 val_f1=0.818
+[resnet50_D3] e20 full val_acc=0.821 val_f1=0.822
+[resnet50_D3] e21 full val_acc=0.831 val_f1=0.832
+[resnet50_D3] e22 full val_acc=0.829 val_f1=0.830
+[resnet50_D3] e23 full val_acc=0.816 val_f1=0.817
+[resnet50_D3] e24 full val_acc=0.829 val_f1=0.830
+[resnet50_D3] e25 full val_acc=0.824 val_f1=0.824
+[resnet50_D3] e26 full val_acc=0.809 val_f1=0.810
+[resnet50_D3] e27 full val_acc=0.835 val_f1=0.836
+[resnet50_D3] e28 full val_acc=0.835 val_f1=0.836
+[resnet50_D3] e29 full val_acc=0.837 val_f1=0.838
+[resnet50_D3] DONE test_acc=0.858 test_macro_f1=0.859 (37.1 min, 30 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[resnet50_D4] e0 head val_acc=0.332 val_f1=0.295
+[resnet50_D4] e1 head val_acc=0.378 val_f1=0.363
+[resnet50_D4] e2 head val_acc=0.384 val_f1=0.379
+[resnet50_D4] e3 full val_acc=0.449 val_f1=0.446
+[resnet50_D4] e4 full val_acc=0.492 val_f1=0.490
+[resnet50_D4] e5 full val_acc=0.538 val_f1=0.530
+[resnet50_D4] e6 full val_acc=0.598 val_f1=0.597
+[resnet50_D4] e7 full val_acc=0.634 val_f1=0.633
+[resnet50_D4] e8 full val_acc=0.681 val_f1=0.681
+[resnet50_D4] e9 full val_acc=0.696 val_f1=0.699
+[resnet50_D4] e10 full val_acc=0.715 val_f1=0.716
+[resnet50_D4] e11 full val_acc=0.737 val_f1=0.737
+[resnet50_D4] e12 full val_acc=0.761 val_f1=0.761
+[resnet50_D4] e13 full val_acc=0.762 val_f1=0.763
+[resnet50_D4] e14 full val_acc=0.763 val_f1=0.763
+[resnet50_D4] e15 full val_acc=0.784 val_f1=0.784
+[resnet50_D4] e16 full val_acc=0.794 val_f1=0.794
+[resnet50_D4] e17 full val_acc=0.794 val_f1=0.795
+[resnet50_D4] e18 full val_acc=0.797 val_f1=0.799
+[resnet50_D4] e19 full val_acc=0.805 val_f1=0.807
+[resnet50_D4] e20 full val_acc=0.812 val_f1=0.812
+[resnet50_D4] e21 full val_acc=0.801 val_f1=0.802
+[resnet50_D4] e22 full val_acc=0.823 val_f1=0.824
+[resnet50_D4] e23 full val_acc=0.806 val_f1=0.808
+[resnet50_D4] e24 full val_acc=0.815 val_f1=0.815
+[resnet50_D4] e25 full val_acc=0.824 val_f1=0.824
+[resnet50_D4] e26 full val_acc=0.815 val_f1=0.816
+[resnet50_D4] e27 full val_acc=0.824 val_f1=0.825
+[resnet50_D4] e28 full val_acc=0.817 val_f1=0.817
+[resnet50_D4] e29 full val_acc=0.820 val_f1=0.819
+[resnet50_D4] DONE test_acc=0.826 test_macro_f1=0.826 (37.2 min, 30 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D1] e0 head val_acc=0.293 val_f1=0.285
+[efficientnetv2s_D1] e1 head val_acc=0.325 val_f1=0.325
+[efficientnetv2s_D1] e2 head val_acc=0.355 val_f1=0.352
+[efficientnetv2s_D1] e3 full val_acc=0.591 val_f1=0.585
+[efficientnetv2s_D1] e4 full val_acc=0.638 val_f1=0.637
+[efficientnetv2s_D1] e5 full val_acc=0.680 val_f1=0.679
+[efficientnetv2s_D1] e6 full val_acc=0.692 val_f1=0.690
+[efficientnetv2s_D1] e7 full val_acc=0.698 val_f1=0.696
+[efficientnetv2s_D1] e8 full val_acc=0.715 val_f1=0.715
+[efficientnetv2s_D1] e9 full val_acc=0.691 val_f1=0.687
+[efficientnetv2s_D1] e10 full val_acc=0.698 val_f1=0.696
+[efficientnetv2s_D1] e11 full val_acc=0.723 val_f1=0.724
+[efficientnetv2s_D1] e12 full val_acc=0.712 val_f1=0.708
+[efficientnetv2s_D1] e13 full val_acc=0.720 val_f1=0.718
+[efficientnetv2s_D1] e14 full val_acc=0.753 val_f1=0.753
+[efficientnetv2s_D1] e15 full val_acc=0.739 val_f1=0.739
+[efficientnetv2s_D1] e16 full val_acc=0.770 val_f1=0.770
+[efficientnetv2s_D1] e17 full val_acc=0.728 val_f1=0.727
+[efficientnetv2s_D1] e18 full val_acc=0.766 val_f1=0.764
+[efficientnetv2s_D1] e19 full val_acc=0.762 val_f1=0.761
+[efficientnetv2s_D1] e20 full val_acc=0.757 val_f1=0.758
+[efficientnetv2s_D1] e21 full val_acc=0.765 val_f1=0.768
+[efficientnetv2s_D1] e22 full val_acc=0.765 val_f1=0.763
+[efficientnetv2s_D1] early stop at epoch 22
+[efficientnetv2s_D1] DONE test_acc=0.767 test_macro_f1=0.765 (31.5 min, 23 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D2] e0 head val_acc=0.259 val_f1=0.251
+[efficientnetv2s_D2] e1 head val_acc=0.300 val_f1=0.299
+[efficientnetv2s_D2] e2 head val_acc=0.337 val_f1=0.333
+[efficientnetv2s_D2] e3 full val_acc=0.652 val_f1=0.649
+[efficientnetv2s_D2] e4 full val_acc=0.733 val_f1=0.729
+[efficientnetv2s_D2] e5 full val_acc=0.769 val_f1=0.769
+[efficientnetv2s_D2] e6 full val_acc=0.761 val_f1=0.761
+[efficientnetv2s_D2] e7 full val_acc=0.763 val_f1=0.762
+[efficientnetv2s_D2] e8 full val_acc=0.762 val_f1=0.764
+[efficientnetv2s_D2] e9 full val_acc=0.796 val_f1=0.795
+[efficientnetv2s_D2] e10 full val_acc=0.800 val_f1=0.799
+[efficientnetv2s_D2] e11 full val_acc=0.776 val_f1=0.774
+[efficientnetv2s_D2] e12 full val_acc=0.789 val_f1=0.788
+[efficientnetv2s_D2] e13 full val_acc=0.793 val_f1=0.793
+[efficientnetv2s_D2] e14 full val_acc=0.828 val_f1=0.827
+[efficientnetv2s_D2] e15 full val_acc=0.829 val_f1=0.829
+[efficientnetv2s_D2] e16 full val_acc=0.789 val_f1=0.787
+[efficientnetv2s_D2] e17 full val_acc=0.836 val_f1=0.837
+[efficientnetv2s_D2] e18 full val_acc=0.837 val_f1=0.838
+[efficientnetv2s_D2] e19 full val_acc=0.808 val_f1=0.808
+[efficientnetv2s_D2] e20 full val_acc=0.833 val_f1=0.833
+[efficientnetv2s_D2] e21 full val_acc=0.798 val_f1=0.798
+[efficientnetv2s_D2] e22 full val_acc=0.824 val_f1=0.824
+[efficientnetv2s_D2] e23 full val_acc=0.848 val_f1=0.849
+[efficientnetv2s_D2] e24 full val_acc=0.821 val_f1=0.823
+[efficientnetv2s_D2] e25 full val_acc=0.824 val_f1=0.824
+[efficientnetv2s_D2] e26 full val_acc=0.835 val_f1=0.836
+[efficientnetv2s_D2] e27 full val_acc=0.816 val_f1=0.814
+[efficientnetv2s_D2] e28 full val_acc=0.856 val_f1=0.856
+[efficientnetv2s_D2] e29 full val_acc=0.835 val_f1=0.834
+[efficientnetv2s_D2] DONE test_acc=0.854 test_macro_f1=0.856 (41.4 min, 30 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[efficientnetv2s_D3] e0 head val_acc=0.267 val_f1=0.259
+[efficientnetv2s_D3] e1 head val_acc=0.289 val_f1=0.284
+[efficientnetv2s_D3] e2 head val_acc=0.328 val_f1=0.324
+[efficientnetv2s_D3] e3 full val_acc=0.610 val_f1=0.603
+[efficientnetv2s_D3] e4 full val_acc=0.738 val_f1=0.733
+[efficientnetv2s_D3] e5 full val_acc=0.810 val_f1=0.811
+[efficientnetv2s_D3] e6 full val_acc=0.817 val_f1=0.817
+[efficientnetv2s_D3] e7 full val_acc=0.785 val_f1=0.786
+[efficientnetv2s_D3] e8 full val_acc=0.820 val_f1=0.820
+[efficientnetv2s_D3] e9 full val_acc=0.837 val_f1=0.836
+[efficientnetv2s_D3] e10 full val_acc=0.837 val_f1=0.838
+[efficientnetv2s_D3] e11 full val_acc=0.837 val_f1=0.840
+[efficientnetv2s_D3] e12 full val_acc=0.824 val_f1=0.824
+[efficientnetv2s_D3] e13 full val_acc=0.824 val_f1=0.823
+[efficientnetv2s_D3] e14 full val_acc=0.853 val_f1=0.854
+[efficientnetv2s_D3] e15 full val_acc=0.866 val_f1=0.866
+[efficientnetv2s_D3] e16 full val_acc=0.874 val_f1=0.874
+[efficientnetv2s_D3] e17 full val_acc=0.870 val_f1=0.870
+[efficientnetv2s_D3] e18 full val_acc=0.855 val_f1=0.854
+[efficientnetv2s_D3] e19 full val_acc=0.874 val_f1=0.873
+[efficientnetv2s_D3] e20 full val_acc=0.882 val_f1=0.882
+[efficientnetv2s_D3] e21 full val_acc=0.851 val_f1=0.851
+[efficientnetv2s_D3] e22 full val_acc=0.868 val_f1=0.869
+[efficientnetv2s_D3] e23 full val_acc=0.863 val_f1=0.865
+[efficientnetv2s_D3] e24 full val_acc=0.851 val_f1=0.852
+[efficientnetv2s_D3] e25 full val_acc=0.883 val_f1=0.883
+[efficientnetv2s_D3] e26 full val_acc=0.871 val_f1=0.871
+[efficientnetv2s_D3] e27 full val_acc=0.860 val_f1=0.860
+[efficientnetv2s_D3] e28 full val_acc=0.867 val_f1=0.867
+[efficientnetv2s_D3] e29 full val_acc=0.867 val_f1=0.867
+[efficientnetv2s_D3] DONE test_acc=0.884 test_macro_f1=0.884 (42.9 min, 30 epochs)
+[device] cuda
+[efficientnetv2s_D4] e0 head val_acc=0.259 val_f1=0.254
+[efficientnetv2s_D4] e1 head val_acc=0.289 val_f1=0.286
+[efficientnetv2s_D4] e2 head val_acc=0.324 val_f1=0.319
+[efficientnetv2s_D4] e3 full val_acc=0.593 val_f1=0.585
+[efficientnetv2s_D4] e4 full val_acc=0.751 val_f1=0.749
+[efficientnetv2s_D4] e5 full val_acc=0.789 val_f1=0.789
+[efficientnetv2s_D4] e6 full val_acc=0.809 val_f1=0.810
+[efficientnetv2s_D4] e7 full val_acc=0.793 val_f1=0.795
+[efficientnetv2s_D4] e8 full val_acc=0.829 val_f1=0.830
+[efficientnetv2s_D4] e9 full val_acc=0.836 val_f1=0.835
+[efficientnetv2s_D4] e10 full val_acc=0.836 val_f1=0.836
+[efficientnetv2s_D4] e11 full val_acc=0.819 val_f1=0.821
+[efficientnetv2s_D4] e12 full val_acc=0.831 val_f1=0.831
+[efficientnetv2s_D4] e13 full val_acc=0.844 val_f1=0.844
+[efficientnetv2s_D4] e14 full val_acc=0.849 val_f1=0.850
+[efficientnetv2s_D4] e15 full val_acc=0.870 val_f1=0.871
+[efficientnetv2s_D4] e16 full val_acc=0.872 val_f1=0.873
+[efficientnetv2s_D4] e17 full val_acc=0.837 val_f1=0.837
+[efficientnetv2s_D4] e18 full val_acc=0.860 val_f1=0.860
+[efficientnetv2s_D4] e19 full val_acc=0.856 val_f1=0.856
+[efficientnetv2s_D4] e20 full val_acc=0.874 val_f1=0.873
+[efficientnetv2s_D4] e21 full val_acc=0.851 val_f1=0.852
+[efficientnetv2s_D4] e22 full val_acc=0.867 val_f1=0.867
+[efficientnetv2s_D4] e23 full val_acc=0.858 val_f1=0.857
+[efficientnetv2s_D4] e24 full val_acc=0.860 val_f1=0.860
+[efficientnetv2s_D4] e25 full val_acc=0.848 val_f1=0.850
+[efficientnetv2s_D4] e26 full val_acc=0.863 val_f1=0.864
+[efficientnetv2s_D4] early stop at epoch 26
+[efficientnetv2s_D4] DONE test_acc=0.870 test_macro_f1=0.870 (33.5 min, 27 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[mobilenetv3small_D1] e0 head val_acc=0.263 val_f1=0.261
+[mobilenetv3small_D1] e1 head val_acc=0.285 val_f1=0.283
+[mobilenetv3small_D1] e2 head val_acc=0.315 val_f1=0.310
+[mobilenetv3small_D1] e3 full val_acc=0.405 val_f1=0.348
+[mobilenetv3small_D1] e4 full val_acc=0.534 val_f1=0.522
+[mobilenetv3small_D1] e5 full val_acc=0.566 val_f1=0.569
+[mobilenetv3small_D1] e6 full val_acc=0.548 val_f1=0.543
+[mobilenetv3small_D1] e7 full val_acc=0.609 val_f1=0.607
+[mobilenetv3small_D1] e8 full val_acc=0.565 val_f1=0.560
+[mobilenetv3small_D1] e9 full val_acc=0.578 val_f1=0.578
+[mobilenetv3small_D1] e10 full val_acc=0.530 val_f1=0.510
+[mobilenetv3small_D1] e11 full val_acc=0.578 val_f1=0.571
+[mobilenetv3small_D1] e12 full val_acc=0.640 val_f1=0.637
+[mobilenetv3small_D1] e13 full val_acc=0.605 val_f1=0.604
+[mobilenetv3small_D1] e14 full val_acc=0.542 val_f1=0.553
+[mobilenetv3small_D1] e15 full val_acc=0.562 val_f1=0.542
+[mobilenetv3small_D1] e16 full val_acc=0.653 val_f1=0.651
+[mobilenetv3small_D1] e17 full val_acc=0.605 val_f1=0.601
+[mobilenetv3small_D1] e18 full val_acc=0.626 val_f1=0.631
+[mobilenetv3small_D1] e19 full val_acc=0.661 val_f1=0.660
+[mobilenetv3small_D1] e20 full val_acc=0.663 val_f1=0.661
+[mobilenetv3small_D1] e21 full val_acc=0.663 val_f1=0.665
+[mobilenetv3small_D1] e22 full val_acc=0.642 val_f1=0.636
+[mobilenetv3small_D1] e23 full val_acc=0.638 val_f1=0.633
+[mobilenetv3small_D1] e24 full val_acc=0.657 val_f1=0.657
+[mobilenetv3small_D1] e25 full val_acc=0.672 val_f1=0.673
+[mobilenetv3small_D1] e26 full val_acc=0.617 val_f1=0.615
+[mobilenetv3small_D1] e27 full val_acc=0.634 val_f1=0.639
+[mobilenetv3small_D1] e28 full val_acc=0.672 val_f1=0.670
+[mobilenetv3small_D1] e29 full val_acc=0.617 val_f1=0.617
+[mobilenetv3small_D1] DONE test_acc=0.699 test_macro_f1=0.698 (23.5 min, 30 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[mobilenetv3small_D2] e0 head val_acc=0.242 val_f1=0.241
+[mobilenetv3small_D2] e1 head val_acc=0.294 val_f1=0.294
+[mobilenetv3small_D2] e2 head val_acc=0.332 val_f1=0.330
+[mobilenetv3small_D2] e3 full val_acc=0.489 val_f1=0.475
+[mobilenetv3small_D2] e4 full val_acc=0.637 val_f1=0.641
+[mobilenetv3small_D2] e5 full val_acc=0.597 val_f1=0.587
+[mobilenetv3small_D2] e6 full val_acc=0.598 val_f1=0.597
+[mobilenetv3small_D2] e7 full val_acc=0.648 val_f1=0.627
+[mobilenetv3small_D2] e8 full val_acc=0.685 val_f1=0.683
+[mobilenetv3small_D2] e9 full val_acc=0.676 val_f1=0.665
+[mobilenetv3small_D2] e10 full val_acc=0.696 val_f1=0.694
+[mobilenetv3small_D2] e11 full val_acc=0.702 val_f1=0.701
+[mobilenetv3small_D2] e12 full val_acc=0.687 val_f1=0.688
+[mobilenetv3small_D2] e13 full val_acc=0.699 val_f1=0.702
+[mobilenetv3small_D2] e14 full val_acc=0.711 val_f1=0.711
+[mobilenetv3small_D2] e15 full val_acc=0.746 val_f1=0.747
+[mobilenetv3small_D2] e16 full val_acc=0.742 val_f1=0.742
+[mobilenetv3small_D2] e17 full val_acc=0.743 val_f1=0.743
+[mobilenetv3small_D2] e18 full val_acc=0.737 val_f1=0.739
+[mobilenetv3small_D2] e19 full val_acc=0.720 val_f1=0.719
+[mobilenetv3small_D2] e20 full val_acc=0.766 val_f1=0.766
+[mobilenetv3small_D2] e21 full val_acc=0.730 val_f1=0.720
+[mobilenetv3small_D2] e22 full val_acc=0.755 val_f1=0.756
+[mobilenetv3small_D2] e23 full val_acc=0.762 val_f1=0.758
+[mobilenetv3small_D2] e24 full val_acc=0.727 val_f1=0.726
+[mobilenetv3small_D2] e25 full val_acc=0.699 val_f1=0.701
+[mobilenetv3small_D2] e26 full val_acc=0.716 val_f1=0.723
+[mobilenetv3small_D2] early stop at epoch 26
+[mobilenetv3small_D2] DONE test_acc=0.784 test_macro_f1=0.784 (21.4 min, 27 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[mobilenetv3small_D3] e0 head val_acc=0.235 val_f1=0.229
+[mobilenetv3small_D3] e1 head val_acc=0.273 val_f1=0.267
+[mobilenetv3small_D3] e2 head val_acc=0.309 val_f1=0.306
+[mobilenetv3small_D3] e3 full val_acc=0.458 val_f1=0.428
+[mobilenetv3small_D3] e4 full val_acc=0.512 val_f1=0.505
+[mobilenetv3small_D3] e5 full val_acc=0.630 val_f1=0.630
+[mobilenetv3small_D3] e6 full val_acc=0.684 val_f1=0.680
+[mobilenetv3small_D3] e7 full val_acc=0.675 val_f1=0.678
+[mobilenetv3small_D3] e8 full val_acc=0.690 val_f1=0.696
+[mobilenetv3small_D3] e9 full val_acc=0.746 val_f1=0.746
+[mobilenetv3small_D3] e10 full val_acc=0.731 val_f1=0.726
+[mobilenetv3small_D3] e11 full val_acc=0.734 val_f1=0.732
+[mobilenetv3small_D3] e12 full val_acc=0.761 val_f1=0.763
+[mobilenetv3small_D3] e13 full val_acc=0.731 val_f1=0.735
+[mobilenetv3small_D3] e14 full val_acc=0.778 val_f1=0.779
+[mobilenetv3small_D3] e15 full val_acc=0.769 val_f1=0.768
+[mobilenetv3small_D3] e16 full val_acc=0.774 val_f1=0.775
+[mobilenetv3small_D3] e17 full val_acc=0.778 val_f1=0.772
+[mobilenetv3small_D3] e18 full val_acc=0.749 val_f1=0.746
+[mobilenetv3small_D3] e19 full val_acc=0.633 val_f1=0.612
+[mobilenetv3small_D3] e20 full val_acc=0.765 val_f1=0.766
+[mobilenetv3small_D3] early stop at epoch 20
+[mobilenetv3small_D3] DONE test_acc=0.802 test_macro_f1=0.802 (17.6 min, 21 epochs)
+[device] cuda
+[mobilenetv3small_D4] e0 head val_acc=0.215 val_f1=0.207
+[mobilenetv3small_D4] e1 head val_acc=0.254 val_f1=0.246
+[mobilenetv3small_D4] e2 head val_acc=0.292 val_f1=0.288
+[mobilenetv3small_D4] e3 full val_acc=0.427 val_f1=0.400
+[mobilenetv3small_D4] e4 full val_acc=0.507 val_f1=0.490
+[mobilenetv3small_D4] e5 full val_acc=0.618 val_f1=0.610
+[mobilenetv3small_D4] e6 full val_acc=0.681 val_f1=0.682
+[mobilenetv3small_D4] e7 full val_acc=0.637 val_f1=0.622
+[mobilenetv3small_D4] e8 full val_acc=0.743 val_f1=0.742
+[mobilenetv3small_D4] e9 full val_acc=0.637 val_f1=0.629
+[mobilenetv3small_D4] e10 full val_acc=0.749 val_f1=0.750
+[mobilenetv3small_D4] e11 full val_acc=0.702 val_f1=0.704
+[mobilenetv3small_D4] e12 full val_acc=0.762 val_f1=0.762
+[mobilenetv3small_D4] e13 full val_acc=0.731 val_f1=0.730
+[mobilenetv3small_D4] e14 full val_acc=0.753 val_f1=0.750
+[mobilenetv3small_D4] e15 full val_acc=0.734 val_f1=0.729
+[mobilenetv3small_D4] e16 full val_acc=0.746 val_f1=0.748
+[mobilenetv3small_D4] e17 full val_acc=0.786 val_f1=0.787
+[mobilenetv3small_D4] e18 full val_acc=0.755 val_f1=0.754
+[mobilenetv3small_D4] e19 full val_acc=0.734 val_f1=0.741
+[mobilenetv3small_D4] e20 full val_acc=0.784 val_f1=0.784
+[mobilenetv3small_D4] e21 full val_acc=0.796 val_f1=0.794
+[mobilenetv3small_D4] e22 full val_acc=0.797 val_f1=0.798
+[mobilenetv3small_D4] e23 full val_acc=0.804 val_f1=0.805
+[mobilenetv3small_D4] e24 full val_acc=0.772 val_f1=0.771
+[mobilenetv3small_D4] e25 full val_acc=0.777 val_f1=0.774
+[mobilenetv3small_D4] e26 full val_acc=0.800 val_f1=0.799
+[mobilenetv3small_D4] e27 full val_acc=0.780 val_f1=0.780
+[mobilenetv3small_D4] e28 full val_acc=0.800 val_f1=0.799
+[mobilenetv3small_D4] e29 full val_acc=0.788 val_f1=0.787
+[mobilenetv3small_D4] early stop at epoch 29
+[mobilenetv3small_D4] DONE test_acc=0.821 test_macro_f1=0.822 (25.1 min, 30 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[swint_D1] e0 head val_acc=0.376 val_f1=0.378
+[swint_D1] e1 head val_acc=0.411 val_f1=0.413
+[swint_D1] e2 head val_acc=0.430 val_f1=0.428
+[swint_D1] e3 full val_acc=0.540 val_f1=0.547
+[swint_D1] e4 full val_acc=0.644 val_f1=0.646
+[swint_D1] e5 full val_acc=0.669 val_f1=0.670
+[swint_D1] e6 full val_acc=0.676 val_f1=0.676
+[swint_D1] e7 full val_acc=0.680 val_f1=0.678
+[swint_D1] e8 full val_acc=0.663 val_f1=0.645
+[swint_D1] e9 full val_acc=0.570 val_f1=0.560
+[swint_D1] e10 full val_acc=0.681 val_f1=0.677
+[swint_D1] e11 full val_acc=0.671 val_f1=0.667
+[swint_D1] e12 full val_acc=0.702 val_f1=0.702
+[swint_D1] e13 full val_acc=0.685 val_f1=0.689
+[swint_D1] e14 full val_acc=0.718 val_f1=0.719
+[swint_D1] e15 full val_acc=0.651 val_f1=0.653
+[swint_D1] e16 full val_acc=0.671 val_f1=0.677
+[swint_D1] e17 full val_acc=0.652 val_f1=0.641
+[swint_D1] e18 full val_acc=0.675 val_f1=0.673
+[swint_D1] e19 full val_acc=0.676 val_f1=0.651
+[swint_D1] e20 full val_acc=0.673 val_f1=0.666
+[swint_D1] early stop at epoch 20
+[swint_D1] DONE test_acc=0.722 test_macro_f1=0.723 (24.4 min, 21 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[swint_D2] e0 head val_acc=0.402 val_f1=0.394
+[swint_D2] e1 head val_acc=0.425 val_f1=0.426
+[swint_D2] e2 head val_acc=0.450 val_f1=0.444
+[swint_D2] e3 full val_acc=0.661 val_f1=0.662
+[swint_D2] e4 full val_acc=0.749 val_f1=0.752
+[swint_D2] e5 full val_acc=0.738 val_f1=0.736
+[swint_D2] e6 full val_acc=0.753 val_f1=0.755
+[swint_D2] e7 full val_acc=0.741 val_f1=0.749
+[swint_D2] e8 full val_acc=0.793 val_f1=0.793
+[swint_D2] e9 full val_acc=0.745 val_f1=0.743
+[swint_D2] e10 full val_acc=0.786 val_f1=0.785
+[swint_D2] e11 full val_acc=0.769 val_f1=0.768
+[swint_D2] e12 full val_acc=0.777 val_f1=0.776
+[swint_D2] e13 full val_acc=0.788 val_f1=0.789
+[swint_D2] e14 full val_acc=0.750 val_f1=0.754
+[swint_D2] early stop at epoch 14
+[swint_D2] DONE test_acc=0.794 test_macro_f1=0.793 (17.2 min, 15 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[swint_D3] e0 head val_acc=0.378 val_f1=0.343
+[swint_D3] e1 head val_acc=0.422 val_f1=0.416
+[swint_D3] e2 head val_acc=0.438 val_f1=0.433
+[swint_D3] e3 full val_acc=0.558 val_f1=0.541
+[swint_D3] e4 full val_acc=0.685 val_f1=0.678
+[swint_D3] e5 full val_acc=0.657 val_f1=0.652
+[swint_D3] e6 full val_acc=0.785 val_f1=0.784
+[swint_D3] e7 full val_acc=0.774 val_f1=0.773
+[swint_D3] e8 full val_acc=0.789 val_f1=0.786
+[swint_D3] e9 full val_acc=0.796 val_f1=0.795
+[swint_D3] e10 full val_acc=0.796 val_f1=0.797
+[swint_D3] e11 full val_acc=0.767 val_f1=0.763
+[swint_D3] e12 full val_acc=0.798 val_f1=0.800
+[swint_D3] e13 full val_acc=0.761 val_f1=0.755
+[swint_D3] e14 full val_acc=0.843 val_f1=0.843
+[swint_D3] e15 full val_acc=0.820 val_f1=0.819
+[swint_D3] e16 full val_acc=0.785 val_f1=0.784
+[swint_D3] e17 full val_acc=0.815 val_f1=0.811
+[swint_D3] e18 full val_acc=0.825 val_f1=0.826
+[swint_D3] e19 full val_acc=0.809 val_f1=0.811
+[swint_D3] e20 full val_acc=0.841 val_f1=0.841
+[swint_D3] early stop at epoch 20
+[swint_D3] DONE test_acc=0.864 test_macro_f1=0.864 (24.5 min, 21 epochs)
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[device] cuda
+[swint_D4] e0 head val_acc=0.391 val_f1=0.373
+[swint_D4] e1 head val_acc=0.429 val_f1=0.429
+[swint_D4] e2 head val_acc=0.434 val_f1=0.427
+[swint_D4] e3 full val_acc=0.544 val_f1=0.528
+[swint_D4] e4 full val_acc=0.664 val_f1=0.658
+[swint_D4] e5 full val_acc=0.567 val_f1=0.579
+[swint_D4] e6 full val_acc=0.716 val_f1=0.724
+[swint_D4] e7 full val_acc=0.741 val_f1=0.727
+[swint_D4] e8 full val_acc=0.742 val_f1=0.735
+[swint_D4] e9 full val_acc=0.800 val_f1=0.800
+[swint_D4] e10 full val_acc=0.806 val_f1=0.805
+[swint_D4] e11 full val_acc=0.816 val_f1=0.814
+[swint_D4] e12 full val_acc=0.816 val_f1=0.815
+[swint_D4] e13 full val_acc=0.819 val_f1=0.813
+[swint_D4] e14 full val_acc=0.829 val_f1=0.827
+[swint_D4] e15 full val_acc=0.840 val_f1=0.839
+[swint_D4] e16 full val_acc=0.789 val_f1=0.784
+[swint_D4] e17 full val_acc=0.813 val_f1=0.811
+[swint_D4] e18 full val_acc=0.848 val_f1=0.848
+[swint_D4] e19 full val_acc=0.825 val_f1=0.825
+[swint_D4] e20 full val_acc=0.835 val_f1=0.834
+[swint_D4] e21 full val_acc=0.843 val_f1=0.841
+[swint_D4] e22 full val_acc=0.819 val_f1=0.818
+[swint_D4] e23 full val_acc=0.769 val_f1=0.766
+[swint_D4] e24 full val_acc=0.774 val_f1=0.778
+[swint_D4] early stop at epoch 24
+[swint_D4] DONE test_acc=0.852 test_macro_f1=0.851 (30.7 min, 25 epochs)
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D1 --batch-size 32 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D2 --batch-size 32 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D3 --batch-size 32 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model resnet50 --preprocess D4 --batch-size 32 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D1 --batch-size 16 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D2 --batch-size 16 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D3 --batch-size 16 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model efficientnetv2s --preprocess D4 --batch-size 16 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D1 --batch-size 32 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D2 --batch-size 32 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D3 --batch-size 32 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model mobilenetv3small --preprocess D4 --batch-size 32 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D1 --batch-size 16 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D2 --batch-size 16 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D3 --batch-size 16 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[run] C:\dev\prethesis\paper2\training\.venv\Scripts\python.exe -m src.train --model swint --preprocess D4 --batch-size 16 --epochs 30 --output-dir results_seed2025 --seed 2025 --num-workers 6
+[summary] wrote results_seed2025\summary.csv (16 runs)
+
+[Tier 2b seed 2025] complete - 21.0 h elapsed
+
+ALL TIERS COMPLETE in 21.0 h
+OK - all 16 original runs unchanged
+Next: open run_followup.ipynb and run the analysis cells (sections 5 onward).
