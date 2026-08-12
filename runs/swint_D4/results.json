@@ -1,0 +1,10 @@
+{
+  "accuracy": 0.8866396761133604,
+  "macro_precision": 0.8906857188187592,
+  "macro_recall": 0.886624516398351,
+  "macro_f1": 0.8877628439039981,
+  "model": "swint",
+  "preprocess": "D4",
+  "test_accuracy": 0.8866396761133604,
+  "best_val_macro_f1": 0.8643061079412441
+}
