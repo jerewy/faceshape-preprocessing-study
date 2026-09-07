@@ -1,0 +1,18 @@
+# License for the committed result files
+
+The code in this repository is licensed under the MIT License; see `LICENSE`.
+
+The **result files** — everything under `runs/`, `results_seed123/`,
+`results_seed2025/`, and `results_align_ablation/`, that is `summary.csv`,
+`results.json`, `epochs.csv`, `test_predictions.npz`, and the confusion-matrix
+images, together with `splits/split.csv` and `splits/split_original.csv` — are
+released under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+You may share and adapt them for any purpose, including commercially, provided
+you give appropriate credit. See `CITATION.cff` for how to cite.
+
+The **Niten Lama Face Shape Dataset** used to produce these results is licensed
+CC0 by its authors and is distributed at
+https://www.kaggle.com/datasets/niten19/face-shape-dataset — no dataset images
+are redistributed in this repository.
