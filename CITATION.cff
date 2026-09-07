@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the tagged release below."
+title: "Face-Shape Classification — Preprocessing-Impact Study"
+abstract: >-
+  Code, fixed data splits, and complete per-run results for an empirical study of how
+  data preparation (resize, face crop, in-plane alignment, augmentation) affects
+  face-shape classification accuracy across CNN and Vision Transformer architectures.
+  Contains 56 training runs: a 4-model x 4-preprocessing main matrix, two seed
+  replications, and an alignment ablation, together with a near-duplicate audit and an
+  identity-level leakage audit of the train/validation/test split.
+type: software
+authors:
+  - family-names: Wijaya
+    given-names: Jeremy
+version: 1.0.0
+date-released: 2026-09-07
+license: MIT
+repository-code: "https://github.com/jerewy/faceshape-preprocessing-study"
+keywords:
+  - face-shape classification
+  - data preparation
+  - image preprocessing
+  - transfer learning
+  - convolutional neural networks
+  - vision transformer
+  - reproducibility

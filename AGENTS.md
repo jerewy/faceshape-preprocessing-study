@@ -7,16 +7,19 @@ not need any external chat context. Read `README.md` for the full design.
 ## Your job, in order
 
 1. **Set up the environment.**
-   - Windows: `scripts\setup_windows.ps1` (uses `py -3.12`; the bare `python` on
-     this user's machine is an old 3.6 — do not use it).
+   - Windows: `scripts\setup_windows.ps1` (uses `py -3.12`; check what bare
+     `python` resolves to before relying on it — an old 3.x on PATH will fail).
    - Linux/Kaggle: `scripts/setup.sh`.
    - Install the **CUDA** build of torch if the machine has an NVIDIA GPU
      (check `nvidia-smi`); otherwise CPU build, or move to a Kaggle T4 notebook.
 2. **Confirm the dataset** is at `data/raw/<class>/*.jpg` for all 5 classes
    (`heart, oblong, oval, round, square`). See `data/README.md`. Do not proceed
    without it.
-3. **Precompute** face-crop and aligned variants (one-time, needed for D2/D3/D4):
+3. **Precompute all three image caches** (one-time). Every version needs one of
+   them: D1 reads `resize`, D2/D3/D3n read `crop`, D4/D4n read `align`. Skipping
+   the resize cache makes every D1 run fail with `FileNotFoundError`.
    ```
+   python scripts/make_resize_cache.py
    python -m src.preprocess_faces --mode crop  --data-root data/raw --out data/preprocessed/crop
    python -m src.preprocess_faces --mode align --data-root data/raw --out data/preprocessed/align
    ```
@@ -27,13 +30,18 @@ not need any external chat context. Read `README.md` for the full design.
    (it skips runs that already have `results.json`, so it is resumable).
 6. **Report** `runs/summary.csv` plus the best model per version and best version
    per model. Highlight MobileNetV3Small (the deployment target).
+7. **Follow-up matrix (only if asked):** `python run_followup.py` — 40 runs, ~18 h,
+   writing the alignment ablation to `results_align_ablation/` and the two seed
+   replications to `results_seed123/` and `results_seed2025/`. It must never write
+   into `runs/`, which holds the original provenance.
 
 ## Acceptance criteria
 
 - All 16 runs produce `results.json` + `confusion_matrix.png`.
 - `runs/summary.csv` has 16 rows with accuracy and macro-F1.
 - The fixed split (`splits/split.csv`, `seed=42`) is identical across all runs.
-- No augmentation leaks into val/test (only train, only D3/D4).
+- No augmentation leaks into val/test (only train, only D3/D4/D3n/D4n).
+- `runs/` is byte-identical before and after any follow-up work.
 
 ## Hardware notes
 
