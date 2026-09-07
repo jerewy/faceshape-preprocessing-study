@@ -44,7 +44,7 @@ cells.append(md('## 0. Setup and guard rails'))
 cells.append(code(r'''import os, sys, json
 from pathlib import Path
 
-REPO_DIR = Path(r"C:\dev\prethesis\paper2\training")
+REPO_DIR = Path.cwd()   # <-- set to the repo root if this notebook is opened elsewhere
 os.chdir(REPO_DIR)
 print("cwd   :", os.getcwd())
 print("python:", sys.executable)

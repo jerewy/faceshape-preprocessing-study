@@ -28,7 +28,7 @@ cells.append(md('## 0. Setup & sanity checks'))
 cells.append(code(r'''import os, sys
 from pathlib import Path
 
-REPO_DIR = Path(r"C:\dev\prethesis\paper2\training")   # <-- edit if your path differs
+REPO_DIR = Path.cwd()   # <-- set to the repo root if this notebook is opened elsewhere
 os.chdir(REPO_DIR)
 print("cwd   :", os.getcwd())
 print("python:", sys.executable)
@@ -37,7 +37,8 @@ import torch
 print("torch :", torch.__version__, "| cuda:", torch.cuda.is_available(),
       "|", torch.cuda.get_device_name(0) if torch.cuda.is_available() else "CPU only")
 
-for sub in ["data/raw", "data/preprocessed/crop", "data/preprocessed/align", "splits/split.csv"]:
+for sub in ["data/raw", "data/preprocessed/resize", "data/preprocessed/crop",
+            "data/preprocessed/align", "splits/split.csv"]:
     print(("OK   " if (REPO_DIR / sub).exists() else "MISSING ") + sub)'''))
 
 cells.append(md('''## 1. Build the D1 resize-cache (the speed fix)
@@ -111,15 +112,14 @@ for i in range(acc.shape[0]):
     for j in range(acc.shape[1]):
         ax.text(j, i, f"{acc.values[i, j]:.3f}", ha="center", va="center", color="w", fontsize=9)
 ax.set_title("Test accuracy — model x preprocessing"); fig.colorbar(im); plt.tight_layout()
-out = Path(r"C:\dev\prethesis\paper2\paper_assets\fig_results_heatmap.png")
+out = Path("../paper_assets/fig_results_heatmap.png")
+out.parent.mkdir(parents=True, exist_ok=True)
 fig.savefig(out, dpi=200, bbox_inches="tight"); fig.savefig(out.with_suffix(".pdf"), bbox_inches="tight")
 print("saved", out)'''))
 
 cells.append(md('''## Done
 `runs/summary.csv` has the 16 rows; per-run confusion matrices are in
-`runs/<model>_<version>/`. The results figure is saved to `paper_assets/`.
-Tell me when it's finished and I'll help interpret it (esp. whether D4/align beat D3,
-and how MobileNetV3 — your deployment target — did).'''))
+`runs/<model>_<version>/`. The results figure is saved to `../paper_assets/`.'''))
 
 nb = {"cells": cells,
       "metadata": {"kernelspec": {"display_name": "Python (.venv)", "language": "python", "name": "python3"},
