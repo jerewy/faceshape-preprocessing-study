@@ -213,10 +213,14 @@ data/README.md              dataset placement instructions
 
 ## License
 
-Code is released under the MIT License (see [`LICENSE`](LICENSE)). The committed result
-files (`summary.csv`, `results.json`, `epochs.csv`, `*.npz`, confusion matrices) are
-released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The Niten Lama
-dataset is CC0 and is distributed by its authors, not redistributed here.
+Code is released under the MIT License — see [`LICENSE`](LICENSE).
+
+The committed result files and split CSVs are released under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) — see
+[`LICENSE-RESULTS`](LICENSE-RESULTS).
+
+The Niten Lama dataset is CC0 and is distributed by its authors; no dataset images are
+redistributed here.
 
 ## Citing
 
