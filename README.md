@@ -8,10 +8,12 @@ Transformer architectures.
 > augmentation) change face-shape classification accuracy, and is the effect consistent
 > across architectures?
 
-This repository is the empirical companion to a systematic literature review,
-*Data Preparation in Image-Based Face-Shape Classification*. It contains every number
-reported in the paper: 56 training runs with their per-epoch logs, per-sample test
-predictions, and confusion matrices. Model checkpoints (3.9 GB) and the dataset itself
+> **Anonymised copy for double-blind review.** Author names, affiliations and the
+> original repository URL are withheld; they will be restored after review.
+
+This repository is the empirical companion to a systematic literature review by the same
+authors. It contains every number reported in the paper: 56 training runs with their
+per-epoch logs, per-sample test predictions, and confusion matrices. Model checkpoints (3.9 GB) and the dataset itself
 are not committed — see [Dataset](#dataset).
 
 ## Contents at a glance

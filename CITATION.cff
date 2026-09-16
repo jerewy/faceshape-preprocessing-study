@@ -10,12 +10,10 @@ abstract: >-
   identity-level leakage audit of the train/validation/test split.
 type: software
 authors:
-  - family-names: Wijaya
-    given-names: Jeremy
+  - name: "Anonymous (double-blind review)"
 version: 1.0.0
 date-released: 2026-09-07
 license: MIT
-repository-code: "https://github.com/jerewy/faceshape-preprocessing-study"
 keywords:
   - face-shape classification
   - data preparation
