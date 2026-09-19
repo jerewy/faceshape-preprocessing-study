@@ -1,4 +1,4 @@
-"""Run the full reviewer-response matrix from a terminal (not a notebook).
+"""Run the full follow-up matrix from a terminal (not a notebook).
 
 An 18-hour job should not depend on a Jupyter kernel staying alive. This is the same
 plan as the Run All cell in run_followup.ipynb, as a plain script that streams to both
