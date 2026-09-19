@@ -1,6 +1,6 @@
 """Publication figure for the near-duplicate audit (Section II.A).
 
-Reviewer 2: "The assertion about near-duplicate images needs stronger support."
+Gives the near-duplicate claim in the manuscript direct visual support.
 
 review_dups.py already produced the full 17-pair contact sheet for internal review;
 this renders a small, captioned subset fit for the manuscript. Reads the audit result

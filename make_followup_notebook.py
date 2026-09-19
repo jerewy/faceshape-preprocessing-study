@@ -1,4 +1,4 @@
-"""Generate run_followup.ipynb — the reviewer-response runs (ICORIS 2026 resubmission).
+"""Generate run_followup.ipynb: the follow-up runs (alignment ablation + seed replications).
 
 Separate from make_notebook.py/run_matrix.ipynb on purpose: that notebook still holds
 the executed outputs of the original 16 runs, which are the provenance for Table II.
@@ -19,16 +19,16 @@ def code(s):
 
 cells = []
 
-cells.append(md(r'''# Paper 2 — Follow-up Runs (reviewer response)
+cells.append(md(r'''# Paper 2 — Follow-up Runs
 
-Answers the two reviewer objections that need compute. **Nothing here touches
+Covers the two follow-up questions that need compute. **Nothing here touches
 `runs/`, `run_matrix.ipynb`, or `splits/split.csv`** — the original 16 runs stay
 exactly as published.
 
-| Tier | What | Runs | Time | Answers |
+| Tier | What | Runs | Time | Purpose |
 |---|---|---|---|---|
-| **1** | Alignment ablation `D3n`/`D4n` (augmentation without rotation) | 8 | ~3.5 h | R2: "D4 confounds rotation augmentation with alignment" |
-| **2a** | Full D1–D4 grid at training seed **123** | 16 | ~7 h | R1: "why only one random seed" · R2: "multi-seed or k-fold" |
+| **1** | Alignment ablation `D3n`/`D4n` (augmentation without rotation) | 8 | ~3.5 h | Isolates alignment from the rotation augmentation D4 also applies |
+| **2a** | Full D1–D4 grid at training seed **123** | 16 | ~7 h | Seed sensitivity of the single-seed D1–D4 comparison |
 | **2b** | Full D1–D4 grid at training seed **2025** | 16 | ~7 h | (same — gives 3 seeds total with the original) |
 
 **The data split never changes.** `src/train.py` pins it to `SPLIT_SEED = 42`; `--seed`
@@ -177,7 +177,7 @@ display(allruns.head(12))'''))
 # ---------------------------------------------------------------- 6. seed table
 cells.append(md('''## 6. Seed variance — the replacement for Table II
 `mean ± sd` over the three training seeds. Report this instead of single-seed numbers;
-it answers R1 directly and lets you say whether the model spread exceeds seed noise.'''))
+it shows directly whether the model spread exceeds seed noise.'''))
 cells.append(code(r'''grid = allruns[allruns.preprocess.isin(["D1", "D2", "D3", "D4"])]
 n_seeds = grid.groupby(["model", "preprocess"]).seed.nunique()
 print("seeds per cell (want 3 everywhere):")
@@ -245,7 +245,7 @@ print("\nHolm-correct these p-values alongside the rest before quoting them in t
 
 # ---------------------------------------------------------------- 8. compute env
 cells.append(md('''## 8. Compute environment (for §II.D)
-R1 asked for GPU model, training time, CUDA version, and memory. Paste this into the
+GPU model, training time, CUDA version, and memory. Paste this into the
 Training subsection.'''))
 cells.append(code(r'''envs = [json.loads(p.read_text(encoding="utf-8")).get("environment")
          for d, _ in SOURCES for p in Path(d).glob("*/results.json")]

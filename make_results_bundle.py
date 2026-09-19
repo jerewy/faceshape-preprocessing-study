@@ -1,4 +1,4 @@
-"""Package the reviewer-response experiment into a shareable bundle + zip.
+"""Package the follow-up experiment into a shareable bundle + zip.
 
 Includes every result, the analysis tables, the code changes, and the figures.
 Excludes model checkpoints (3.9 GB of best.pt) and the raw dataset, which is public
@@ -96,7 +96,7 @@ def write_ablation_csv(acc, ablation):
 def results_md(acc, ablation):
     L = []
     A = L.append
-    A("# Results — preprocessing-impact study, reviewer-response runs\n")
+    A("# Results — preprocessing-impact study, follow-up runs\n")
     A(f"Generated {datetime.now():%Y-%m-%d}. 40 new runs, 21.0 GPU-hours, RTX 4060.\n")
 
     A("\n## Table II (revised): test accuracy %, mean ± sd over 3 training seeds\n")
@@ -166,7 +166,7 @@ def results_md(acc, ablation):
       f"{np.mean(sds):.2f}-pt seed noise. It is not a reliable finding without replication "
       "at seeds 123 and 2025 (8 runs, ~4.5 h). Reported here for completeness, not as a result.\n")
 
-    A("\n## Identity-level leakage audit (new, beyond what reviewers asked)\n")
+    A("\n## Identity-level leakage audit (new, beyond the dHash audit)\n")
     A("The published dHash audit compares **raw files**. Two different photographs of the\n"
       "same person differ in framing, so their hashes diverge — but after face cropping and\n"
       "alignment they become near-identical training inputs. Perceptual hashing cannot see this.\n")
@@ -195,23 +195,23 @@ def results_md(acc, ablation):
 
 def readme_md(rows):
     total_min = sum(r["train_minutes"] for r in rows if isinstance(r["train_minutes"], float))
-    return f"""# Face-Shape Preprocessing Study — reviewer-response experiment bundle
+    return f"""# Face-Shape Preprocessing Study — follow-up experiment bundle
 
-Everything from the follow-up experiment run in response to the ICORIS 2026 reviews:
-raw per-run results, analysis, code changes, and figures.
+Everything from the follow-up experiment: raw per-run results, analysis, code changes,
+and figures.
 
 Generated {datetime.now():%Y-%m-%d}.
 
 ## What this was for
 
 The original paper compared 4 ImageNet-pretrained models across 4 cumulative
-preprocessing variants (D1–D4) on the Niten Lama face-shape dataset. Two reviewer
-objections needed compute to answer:
+preprocessing variants (D1–D4) on the Niten Lama face-shape dataset. Two open questions
+needed compute to answer:
 
-1. **"Why only one random seed?"** (R1) and **"multi-seed or k-fold validation"** (R2)
-   → the full 16-config grid was re-run at training seeds **123** and **2025**.
-2. **"D4 still confounds rotation augmentation with face alignment"** (R2)
-   → two new variants, **D3n / D4n**, isolate alignment cleanly.
+1. **Single-seed results.** The full 16-config grid was re-run at training seeds
+   **123** and **2025**, giving 3 seeds per configuration.
+2. **D4 confounds rotation augmentation with face alignment.** Two new variants,
+   **D3n / D4n**, isolate alignment cleanly.
 
 **40 new runs, {total_min / 60:.1f} GPU-hours, NVIDIA RTX 4060.**
 
@@ -270,8 +270,8 @@ runs/                         per-run results.json, epochs.csv, predictions, con
 | `run_followup.py` | Terminal runner for all three tiers, resumable. |
 | `run_followup.ipynb` | Notebook version + analysis cells. |
 | `check_identity_leakage.py` | **New** — identity-level leakage audit. |
-| `make_error_analysis.py` | **New** — misclassified-sample figure (R1 asked for this). |
-| `make_dup_figure.py` | **New** — near-duplicate figure (R2 asked for this). |
+| `make_error_analysis.py` | **New** — misclassified-sample figure. |
+| `make_dup_figure.py` | **New** — near-duplicate figure. |
 
 The original 16 runs and `run_matrix.ipynb` were never modified; a fingerprint check
 verified all 16 accuracies unchanged after all 40 new runs.

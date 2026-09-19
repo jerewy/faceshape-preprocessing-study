@@ -9,10 +9,11 @@ Transformer architectures.
 > across architectures?
 
 This repository is the empirical companion to a systematic literature review,
-*Data Preparation in Image-Based Face-Shape Classification*. It contains every number
-reported in the paper: 56 training runs with their per-epoch logs, per-sample test
-predictions, and confusion matrices. Model checkpoints (3.9 GB) and the dataset itself
-are not committed — see [Dataset](#dataset).
+*Data Preparation in Face-Shape Classification: A Systematic Literature Review*.
+It contains every number reported in the paper: 56 training runs with their
+per-epoch logs, per-sample test predictions, and confusion matrices. Model
+checkpoints (3.9 GB) and the dataset itself are not committed — see
+[Dataset](#dataset).
 
 ## Contents at a glance
 

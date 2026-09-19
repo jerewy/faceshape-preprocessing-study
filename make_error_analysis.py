@@ -1,7 +1,6 @@
 """Error analysis figure + table for Section III.D.
 
-Reviewer 1: "Additional error analysis using representative misclassified samples
-would also strengthen the discussion."
+Adds representative misclassified samples to the discussion of where the models fail.
 
 Shows the most confidently wrong test images for the deployment model, concentrating
 on the oval/round/oblong band the paper identifies as genuinely ambiguous. Reads the
