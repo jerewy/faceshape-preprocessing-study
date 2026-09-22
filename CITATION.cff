@@ -5,9 +5,13 @@ abstract: >-
   Code, fixed data splits, and complete per-run results for an empirical study of how
   data preparation (resize, face crop, in-plane alignment, augmentation) affects
   face-shape classification accuracy across CNN and Vision Transformer architectures.
-  Contains 56 training runs: a 4-model x 4-preprocessing main matrix, two seed
-  replications, and an alignment ablation, together with a near-duplicate audit and an
-  identity-level leakage audit of the train/validation/test split.
+  Contains the complete results of 56 training runs: a 4-model x 4-preprocessing main
+  matrix, two seed replications, and an alignment ablation, together with the fixed data
+  split and the scripts for a near-duplicate audit and an identity-level leakage audit of
+  that split. The near-duplicate audit has been applied to the committed split; the
+  identity audit finds that 16.2% of held-out images share an identity with a training
+  image, so the reported absolute accuracies are upper bounds. Audit output files are not
+  committed, as regenerating them requires the dataset.
 type: software
 authors:
   - family-names: Wijaya

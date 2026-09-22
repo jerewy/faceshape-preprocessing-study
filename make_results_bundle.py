@@ -93,6 +93,19 @@ def write_ablation_csv(acc, ablation):
                         round(ablation[(m, "D4n")] - ablation[(m, "D3n")], 2)])
 
 
+def load_leakage_summary():
+    """Headline counts from check_identity_leakage.py, or None if it has not been run.
+
+    These used to be hardcoded prose. They are measurements, so the bundle either
+    quotes the audit's own output or says the audit has not been run — it never
+    asserts a number with nothing behind it.
+    """
+    p = ASSETS / "identity_leakage_summary.json"
+    if not p.exists():
+        return None
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
 def results_md(acc, ablation):
     L = []
     A = L.append
@@ -170,16 +183,31 @@ def results_md(acc, ablation):
     A("The published dHash audit compares **raw files**. Two different photographs of the\n"
       "same person differ in framing, so their hashes diverge — but after face cropping and\n"
       "alignment they become near-identical training inputs. Perceptual hashing cannot see this.\n")
-    A("\nEmbedding all 5,000 images with InceptionResnetV1 (VGGFace2) and clustering at\n"
-      "cosine ≥ 0.95 (connected components):\n")
-    A("- **195 identity clusters span a split boundary**")
-    A("- **240 held-out images (16.2% of val+test)** sit in such a cluster")
-    A("- 13 clusters carry more than one face-shape label (annotation noise)")
-    A("\nValidated visually: 6 of 6 randomly sampled pairs at the threshold were the same\n"
-      "person in a different photograph. See `figures/fig_identity_leakage.png`.\n")
-    A("\n**Implication:** absolute accuracies on this dataset are inflated — for this study\n"
-      "*and* for all prior work on it. Relative comparisons (the subject of the paper) are\n"
-      "unaffected, since leakage applies to all arms roughly equally.\n")
+    lk = load_leakage_summary()
+    if lk is None:
+        A("\n**NOT AVAILABLE — `check_identity_leakage.py` has not been run against this\n"
+          "checkout.** It needs the dataset and the crop/align caches. Run it, then rebuild\n"
+          "this bundle; until then no leakage figures are reported here.\n")
+    else:
+        A(f"\nEmbedding all {lk['n_images']:,} images with InceptionResnetV1 (VGGFace2) and\n"
+          f"clustering at cosine >= {lk['threshold']} (connected components):\n")
+        A(f"- **{lk['clusters_spanning_splits']} identity clusters span a split boundary**")
+        A(f"- **{lk['heldout_images_in_spanning_cluster']} held-out images "
+          f"({lk['heldout_leaked_pct']}% of val+test)** sit in such a cluster")
+        A(f"- {lk['clusters_with_multiple_labels']} clusters carry more than one "
+          "face-shape label (annotation noise)")
+        A("\nSee `figures/fig_identity_leakage.png` for sampled pairs across the "
+          "similarity range.\n")
+        A("\n**Implication for absolute accuracy:** inflated — for this study *and* for all\n"
+          "prior work on this dataset. Every accuracy in the tables above is an upper bound\n"
+          "on performance for an unseen person.\n")
+        A("\n**Implication for the relative comparison:** not assumed. Cropping and alignment\n"
+          "normalise exactly the framing differences that make two photographs of one person\n"
+          "look different, so the arms may not benefit from leakage equally — which would\n"
+          "inflate the D1->D3 gain rather than cancelling out. `check_leakage_impact.py`\n"
+          "re-scores every committed run on the leakage-free subset of the test set and\n"
+          "compares each contrast against a random-subset null; see `data/leakage_impact.md`\n"
+          "for the measured result on this checkout.\n")
 
     A("\n## Corrections to the manuscript\n")
     A("| Location | Current | Should be |")
@@ -238,7 +266,9 @@ sides, leaving alignment as the only difference.
   every model — 8–12× the measured seed noise of 1.31 pts.
 - **The published best result does not replicate:** Swin-T D4 was 88.7 / 85.4 / 85.2
   across seeds (mean 86.4 ± 2.0). EfficientNetV2-S is the better model.
-- **The alignment null is confirmed** at three seeds and with the confound removed.
+- **The alignment null holds at three seeds** for the published D4 vs D3 comparison.
+  With the rotation confound removed (D3n/D4n) the effect is positive in all four
+  models, but at one seed and short of significance — suggestive, not a result.
 - **New:** identity-level leakage — 195 identity clusters straddle the train/test split,
   invisible to the published perceptual-hash audit.
 
@@ -253,6 +283,7 @@ data/
   table2_mean_sd.csv          revised Table II
   alignment_ablation.csv      D3n/D4n vs D3/D4
   identity_leakage.csv        cross-split identity matches
+  leakage_impact.md           does leakage shift the preprocessing contrasts?
   dup_pairs.csv               original dHash near-duplicate audit (17 pairs)
 figures/                      error analysis, near-duplicates, identity leakage
 code/                         all source changes (see below)
@@ -270,6 +301,7 @@ runs/                         per-run results.json, epochs.csv, predictions, con
 | `run_followup.py` | Terminal runner for all three tiers, resumable. |
 | `run_followup.ipynb` | Notebook version + analysis cells. |
 | `check_identity_leakage.py` | **New** — identity-level leakage audit. |
+| `check_leakage_impact.py` | **New** — tests whether leakage shifts the D-contrasts. |
 | `make_error_analysis.py` | **New** — misclassified-sample figure. |
 | `make_dup_figure.py` | **New** — near-duplicate figure. |
 
@@ -315,7 +347,8 @@ def main():
     (OUT / "RESULTS.md").write_text(results_md(acc, ablation), encoding="utf-8")
     (OUT / "README.md").write_text(readme_md(rows), encoding="utf-8")
 
-    for name in ["identity_leakage.csv", "dup_pairs.csv", "error_analysis_confusions.csv"]:
+    for name in ["identity_leakage.csv", "identity_leakage_summary.json",
+                 "leakage_impact.md", "dup_pairs.csv", "error_analysis_confusions.csv"]:
         if (ASSETS / name).exists():
             shutil.copy2(ASSETS / name, OUT / "data" / name)
     for fig in ASSETS.glob("fig_*.png"):
@@ -326,7 +359,8 @@ def main():
         if Path("src", f).exists():
             shutil.copy2(Path("src", f), OUT / "code" / "src" / f)
     for f in ["run_followup.py", "make_followup_notebook.py", "run_followup.ipynb",
-              "check_identity_leakage.py", "make_error_analysis.py", "make_dup_figure.py",
+              "check_identity_leakage.py", "check_leakage_impact.py",
+              "make_error_analysis.py", "make_dup_figure.py",
               "make_results_bundle.py", "requirements.txt"]:
         if Path(f).exists():
             shutil.copy2(f, OUT / "code" / f)

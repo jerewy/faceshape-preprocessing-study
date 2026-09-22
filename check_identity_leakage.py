@@ -23,6 +23,7 @@ Statistics reported, and why:
 """
 import argparse
 import csv
+import json
 from pathlib import Path
 
 import matplotlib
@@ -163,11 +164,27 @@ def main():
     print(f"  {conflicting} clusters carry MORE THAN ONE face-shape label "
           f"(annotation noise, independent of leakage)")
 
+    # Headline counts as data, not just console text: make_results_bundle.py and the
+    # README quote these, and a number that lives only in a print statement drifts.
+    OUT.mkdir(parents=True, exist_ok=True)
+    summary = {
+        "threshold": args.threshold,
+        "n_images": len(rows),
+        "n_heldout": int(len(ho)),
+        "n_clusters": int(ncomp),
+        "clusters_spanning_splits": int(spanning),
+        "heldout_images_in_spanning_cluster": int(leaked),
+        "heldout_leaked_pct": round(leaked / len(ho) * 100, 1),
+        "clusters_with_multiple_labels": int(conflicting),
+    }
+    (OUT / "identity_leakage_summary.json").write_text(
+        json.dumps(summary, indent=2), encoding="utf-8")
+    print(f"\nwrote {OUT / 'identity_leakage_summary.json'}")
+
     ii, jj = np.where(sim >= args.threshold)
     order = np.argsort(-sim[ii, jj])
     pairs = [(tr[ii[k]], ho[jj[k]], float(sim[ii[k], jj[k]])) for k in order]
 
-    OUT.mkdir(parents=True, exist_ok=True)
     with (OUT / "identity_leakage.csv").open("w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["cosine", "train_file", "train_class",
