@@ -178,6 +178,45 @@ calibrated against a random-pair null drawn from this same dataset. Image-level 
 cannot catch the same person photographed on a different day, which is the leakage mode
 that matters for a celebrity-heavy dataset.
 
+## Environment and known issues
+
+Reproduction notes that are easy to miss and expensive to rediscover.
+
+**Hardware**
+
+- Device is auto-detected: CUDA → Intel XPU → CPU.
+- `swint` and `efficientnetv2s` are the memory-hungry backbones; `run_matrix.py`
+  already lowers their batch size to 16. On CUDA OOM, lower `--batch-size`
+  further or add gradient accumulation.
+- The 16-run main matrix takes a few hours on a single T4.
+
+**Known issues**
+
+- *Truncated images.* Some source images are truncated. Handled in `src/data.py`
+  via `PIL.ImageFile.LOAD_TRUNCATED_IMAGES = True`.
+- *Non-image files in the dataset.* `testing_set/Round` ships with a Windows
+  `desktop.ini`, which inflates the image count to 1001. Remove any non-image
+  files from `data/raw/` before building splits.
+- *mediapipe 0.10+.* The `mp.solutions` API was removed. `src/preprocess_faces.py`
+  uses the Tasks API (`mediapipe.tasks.vision.FaceLandmarker`); an older mediapipe
+  will not work against the current code.
+
+**Invariants that keep the comparison valid**
+
+Check these before trusting any re-run:
+
+- Input size is 224×224 for every model, so preprocessing is the only variable
+  that changes across the matrix.
+- The split is fixed (`splits/split.csv`, `SPLIT_SEED=42`) and identical across
+  every run.
+- Augmentation applies to train only, and only for D3/D4/D3n/D4n — never to val
+  or test.
+- `runs/` is byte-identical before and after any follow-up work. The follow-up
+  writes only to `results_align_ablation/`, `results_seed123/` and
+  `results_seed2025/`.
+- All 16 main-matrix runs produce `results.json` and `confusion_matrix.png`, and
+  `runs/summary.csv` has 16 rows with accuracy and macro-F1.
+
 ## Scope of claims
 
 - Training and testing are on the Niten Lama dataset **only**. The comparison across
